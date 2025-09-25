@@ -22,8 +22,15 @@ class IndexController extends Controller
         return view('frontend.index', compact('categories'));
     }
 
-    public function SubCategories()
+    public function stores($id)
     {
+        $response = Http::withHeaders([
+            'X-API-KEY' => '8f4d9a2b-6c1e-4b7a-9d3e-12f5a8b7c9d0'
+        ])->get('https://admin.saadatyapp.com/api/stores/{$id}');
+
+        // Convert response to array
+        $stores = $response->json();
+
         $response = Http::withHeaders([
             'X-API-KEY' => '8f4d9a2b-6c1e-4b7a-9d3e-12f5a8b7c9d0'
         ])->get('https://admin.saadatyapp.com/api/districts');
@@ -31,7 +38,8 @@ class IndexController extends Controller
         // Convert response to array
         $districts = $response->json();
 
-        return view('frontend.sub_categories', compact('districts'));
+        return view('frontend.sub_categories', compact('stores', 'districts'));
+
     }
 
 

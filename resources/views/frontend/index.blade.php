@@ -157,14 +157,14 @@
                     <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
                         <div class="news-block_one-inner">
                             <div class="news-block_one-image">
-                                <a href="{{ url('/sub-categories') }}"><img src="{{ $category['image'] }}" alt="" /></a>
+                                <a href="{{ route('stores', ['id' => $category['id']]) }}"><img src="{{ $category['image'] }}" alt="" /></a>
                                 <img src="{{ $category['image'] }}" alt="" />
                             </div>
                             <div class="news-block_one-content text-center">
                                 <ul class="news-block_one-meta">
                                 </ul>
-                                <h5 class="news-block_one-title"><a href="{{ url('/sub-categories') }}">{{ $category['name'] }}</a></h5>
-                                <a class="news-block_one-more" href="{{ url('/sub-categories') }}">اقرا المزيد</a>
+                                <h5 class="news-block_one-title"><a href="{{ route('stores', ['id' => $category['id']]) }}">{{ $category['name'] }}</a></h5>
+                                <a class="news-block_one-more" href="{{ route('stores', ['id' => $category['id']]) }}">اقرا المزيد</a>
                             </div>
                         </div>
                     </div>

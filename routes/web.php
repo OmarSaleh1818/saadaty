@@ -9,8 +9,7 @@ Route::get('/', [IndexController::class, 'index'])->name('home');
 
 
 // stores
-Route::get('/stores/{name}', [IndexController::class, 'Stores'])->name('stores');
-Route::get('/sub-categories', [IndexController::class, 'SubCategories'])->name('sub.categories');
+Route::get('/stores/{id}', [IndexController::class, 'Stores'])->name('stores');
 
 Route::get('/blog', function() {
     return view('frontend.blog');

@@ -1,5 +1,8 @@
 @extends('frontend.main')
 
+@section('head')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+@endsection
 @section('content')
 
     <!-- Page Title -->
@@ -47,8 +50,7 @@
 						<!-- Neighborhood Selection -->
 						<div class="col-lg-4 col-md-6 col-sm-12">
 							<label for="neighborhood" class="form-label">اختر الحي</label>
-							<select class="form-control" id="neighborhood" name="neighborhood" required>
-								<option value="">اختر الحي</option>
+							<select class="form-control select2" name="district" required>
                                 @foreach ($districts as $district)
                                     <option value="{{ $district }}">
                                         {{ $district }}
@@ -72,87 +74,37 @@
 				</form>
 
 				<!-- News Block -->
-				<div class="news-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="news-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<!-- Post Info -->
-						<!-- <div class="news-block_two-date">2 May 2025</div> -->
-						<div class="news-block_two-image">
-							<a href="{{ url('/blog') }}"><img src="assets/images/resource/news-4.jpg" alt="" /></a>
-							<img src="assets/images/resource/news-4.jpg" alt="" />
-						</div>
-						<div class="news-block_two-content">
-							<!-- <ul class="news-block_two-meta">
-								<li><span class="icon fa-regular fa-calendar fa-fw"></span>by Christine</li>
-								<li><span class="icon fa-solid fa-comments fa-fw"></span>(03) Comments</li>
-							</ul> -->
-							<h4 class="news-block_two-title"><a href="{{ url('/blog') }}">قاعة وناسة </a></h4>
-							<a class="news-block_two-more" href="{{ url('/blog') }}">اقرأ المزيد</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- News Block -->
-				<div class="news-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="news-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<!-- Post Info -->
-						<!-- <div class="news-block_two-date">2 May 2025</div> -->
-						<div class="news-block_two-image">
-							<a href="{{ url('/blog') }}"><img src="assets/images/resource/news-4.jpg" alt="" /></a>
-							<img src="assets/images/resource/news-4.jpg" alt="" />
-						</div>
-						<div class="news-block_two-content">
-							<!-- <ul class="news-block_two-meta">
-								<li><span class="icon fa-regular fa-calendar fa-fw"></span>by Christine</li>
-								<li><span class="icon fa-solid fa-comments fa-fw"></span>(03) Comments</li>
-							</ul> -->
-							<h4 class="news-block_two-title"><a href="{{ url('/blog') }}">قاعة نسائم ليل</a></h4>
-							<a class="news-block_two-more" href="{{ url('/blog') }}">اقرأ المزيد</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- News Block -->
-				<div class="news-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="news-block_two-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<!-- Post Info -->
-						<!-- <div class="news-block_two-date">2 May 2025</div> -->
-						<div class="news-block_two-image">
-							<a href="{{ url('/blog') }}"><img src="assets/images/resource/news-5.jpg" alt="" /></a>
-							<img src="assets/images/resource/news-5.jpg" alt="" />
-						</div>
-						<div class="news-block_two-content">
-							<!-- <ul class="news-block_two-meta">
-								<li><span class="icon fa-regular fa-calendar fa-fw"></span>by Christine</li>
-								<li><span class="icon fa-solid fa-comments fa-fw"></span>(03) Comments</li>
-							</ul> -->
-							<h4 class="news-block_two-title"><a href="{{ url('/blog') }}">قاعة ليلة فرح</a></h4>
-							<a class="news-block_two-more" href="{{ url('/blog') }}">اقرأ المزيد</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- News Block -->
-				<div class="news-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="news-block_two-inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<!-- Post Info -->
-						<!-- <div class="news-block_two-date">2 May 2025</div> -->
-						<div class="news-block_two-image">
-							<a href="{{ url('/blog') }}"><img src="assets/images/resource/news-6.jpg" alt="" /></a>
-							<img src="assets/images/resource/news-6.jpg" alt="" />
-						</div>
-						<div class="news-block_two-content">
-							<!-- <ul class="news-block_two-meta">
-								<li><span class="icon fa-regular fa-calendar fa-fw"></span>by Christine</li>
-								<li><span class="icon fa-solid fa-comments fa-fw"></span>(03) Comments</li>
-							</ul> -->
-							<h4 class="news-block_two-title"><a href="{{ url('/blog') }}">قاعة فرح</a></h4>
-							<a class="news-block_two-more" href="{{ url('/blog') }}">اقرأ المزيد</a>
-						</div>
-					</div>
-				</div>
-
+                @foreach ($stores as $store)
+                    <div class="news-block_two col-lg-3 col-md-6 col-sm-12">
+                        <div class="news-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <!-- Post Info -->
+                            <!-- <div class="news-block_two-date">2 May 2025</div> -->
+                            <div class="news-block_two-image">
+                                <a href="{{ url('/blog') }}"><img src="{{ asset($store['main_image_url']) }}" alt="" /></a>
+                                <img src="{{ asset($store['main_image_url']) }}" alt="" />
+                            </div>
+                            <div class="news-block_two-content">
+                                <!-- <ul class="news-block_two-meta">
+                                    <li><span class="icon fa-regular fa-calendar fa-fw"></span>by Christine</li>
+                                    <li><span class="icon fa-solid fa-comments fa-fw"></span>(03) Comments</li>
+                                </ul> -->
+                                <h4 class="news-block_two-title"><a href="{{ url('/blog') }}">{{ $store['name'] }}</a></h4>
+                                <a class="news-block_two-more" href="{{ url('/blog') }}">اقرأ المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
 			</div>
 		</div>
 	</section>
 
+@endsection
+
+@section('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             $('.select2').select2({ placeholder: "اختر", allowClear: true });
+        });
+    </script>
 @endsection
