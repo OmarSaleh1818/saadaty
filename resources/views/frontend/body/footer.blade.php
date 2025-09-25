@@ -32,10 +32,10 @@
                             <div class="footer-two-widget links-widget">
                                 <h4 class="footer-two_title">الصفحات</h4>
                                 <ul class="footer-two_list">
-                                    <li><a href="index.html">الصفحة الرئيسية</a></li>
-                                    <li><a href="#">عنــّــــــا</a></li>
-                                    <li><a href="index.html#category">الفئات</a></li>
-                                    <li><a href="contact.html">التواصل</a></li>
+                                    <li class="current"><a href="{{ route('home') }}#index">الصفحة الرئيسية</a></li>
+									<li><a href="{{ route('home') }}#about">عنـّــــا</a></li>
+									<li><a href="{{ route('home') }}#categories">الفئـــات</a></li>
+									<li><a href="{{ route('home') }}#contact">التواصل</a></li>
                                 </ul>
                             </div>
                         </div>

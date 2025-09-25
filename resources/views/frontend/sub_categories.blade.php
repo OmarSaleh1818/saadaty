@@ -40,9 +40,7 @@
 							<label for="city" class="form-label">اختر المدينة</label>
 							<select class="form-control" id="city" name="city" required>
 								<option value="">اختر المدينة</option>
-								<option value="riyadh">الرياض</option>
-								<option value="jeddah">جدة</option>
-								<option value="dammam">الدمام</option>
+								<option value="jeddah" selected>جدة</option>
 							</select>
 						</div>
 
@@ -51,9 +49,11 @@
 							<label for="neighborhood" class="form-label">اختر الحي</label>
 							<select class="form-control" id="neighborhood" name="neighborhood" required>
 								<option value="">اختر الحي</option>
-								<option value="alwafa">الوفاء</option>
-								<option value="alsalama">السلامة</option>
-								<option value="alneim">النعيم</option>
+                                @foreach ($districts as $district)
+                                    <option value="{{ $district }}">
+                                        {{ $district }}
+                                    </option>
+                                @endforeach
 							</select>
 						</div>
 

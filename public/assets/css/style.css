@@ -1,6 +1,6 @@
 /* Conat Events Business HTML-5 Template */
 
-/*** 
+/***
 
 ====================================================================
 	Attachment Css Files
@@ -23,7 +23,7 @@
 @import url('jquery.bootstrap-touchspin.css');
 @import url(https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap);
 
-/*** 
+/***
 
 ====================================================================
 	Main Slider Section
@@ -175,7 +175,7 @@
 
 .slider-one .active .slider-one_title{
 	opacity: 1;
-	
+
 	-webkit-transition-delay: 300ms;
 	-moz-transition-delay: 300ms;
 	-ms-transition-delay: 300ms;
@@ -281,7 +281,7 @@
 	background-color:var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	About One
@@ -529,7 +529,7 @@
 	margin-top: var(--margin-top-10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Counter One
@@ -539,7 +539,7 @@
 
 .counter-one{
 	position: relative;
-	
+
 }
 
 .counter-one .inner-container{
@@ -592,7 +592,7 @@
 	margin-top: var(--margin-top-10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Speaker One
@@ -771,7 +771,7 @@
 	margin-top: var(--margin-top-10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Feature One
@@ -852,11 +852,11 @@
 
 .feature-block_one-icon{
 	position: relative;
-	line-height: 1em;
+	line-height: 2em;
 	z-index: 1;
 	display: inline-block;
 	font-size: var(--font-60);
-	color: var(--color-four);
+	color: #8b7d4f;
 	font-family: "Flaticon";
 }
 
@@ -888,7 +888,7 @@
 	margin-top: var(--margin-top-20);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Leadership One
@@ -945,7 +945,7 @@
 	background-repeat: no-repeat;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Product Tabs Style
@@ -1011,7 +1011,7 @@
 
 .leadership-tabs .tab-btns .tab-btn:hover,
 .leadership-tabs .tab-btns .tab-btn.active-btn{
-	
+
 }
 
 .leadership-tabs .tab-btns .tab-btn:last-child{
@@ -1154,7 +1154,7 @@
 	right: auto;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Gallery One
@@ -1232,7 +1232,7 @@
 	color: var(--color-three);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Price One
@@ -1366,7 +1366,7 @@
 	background-color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Video One
@@ -1523,7 +1523,7 @@
     position: absolute;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Clients One
@@ -1557,7 +1557,7 @@
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
 }
 
-/*** 
+/***
 
 ====================================================================
 	News One
@@ -1717,7 +1717,7 @@
 	font-weight: 700;
 	letter-spacing: 1px;
 	display: inline-block;
-	color: var(--color-three);
+	color: #8b7d4f;
 	text-transform: capitalize;
 	margin-top: var(--margin-top-15);
 	padding-right: var(--padding-right-25);
@@ -1729,14 +1729,14 @@
 
 .news-block_one-more::before{
 	position: absolute;
-	content: '\f178'; 
+	content: '\f178';
 	right: 0px;
 	top: 5px;
 	line-height: 1em;
 	font-family: 'Font Awesome 6 Free';
 }
 
-/*** 
+/***
 
 ====================================================================
 	Subscribe One
@@ -1920,7 +1920,7 @@
   height: 100%;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Slider Two
@@ -2136,7 +2136,7 @@
 	display: none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	About One
@@ -2331,7 +2331,7 @@
 	text-transform: uppercase;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event One
@@ -2411,7 +2411,7 @@
 	margin-bottom: var(--margin-bottom-10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Counter Two
@@ -2497,7 +2497,7 @@
 	color: var(--color-six);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event Two
@@ -2569,7 +2569,7 @@
 	color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Team One
@@ -2679,7 +2679,7 @@
 	bottom: 0px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Speaker Two
@@ -2698,7 +2698,7 @@
 	padding: 0px 80px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Speaker Tabs Style
@@ -2960,7 +2960,7 @@
 	background: linear-gradient(to right, #080707 0%, #70666b 100%);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Faq One
@@ -2975,7 +2975,7 @@
 	background-position: center center;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Accordion Style
@@ -3000,7 +3000,7 @@
 }
 
 .accordion-box .block .acc-btn.active{
-	
+
 }
 
 .accordion-box .block .acc-btn{
@@ -3067,11 +3067,11 @@
 }
 
 .accordion-box .block .acc-content .content-text{
-	
+
 }
 
 .accordion-box .block .acc-content.current{
-	display:block;	
+	display:block;
 }
 
 .accordion-box .block .content{
@@ -3089,7 +3089,7 @@
 	border: 1px solid rgba(var(--black-color-rgb), 0.07);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Price Two
@@ -3271,7 +3271,7 @@
 	color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	News Two
@@ -3403,7 +3403,7 @@
 	font-weight: 700;
 	letter-spacing: 1px;
 	display: inline-block;
-	color: var(--color-three);
+	color: #a59b77;
 	text-transform: capitalize;
 	margin-top: var(--margin-top-15);
 	padding-right: var(--padding-right-25);
@@ -3415,14 +3415,14 @@
 
 .news-block_two-more::before{
 	position: absolute;
-	content: '\f178'; 
+	content: '\f178';
 	right: 0px;
 	top: 5px;
 	line-height: 1em;
 	font-family: 'Font Awesome 6 Free';
 }
 
-/*** 
+/***
 
 ====================================================================
 	Location one
@@ -3491,7 +3491,7 @@
 	color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Subscribe One
@@ -3524,7 +3524,7 @@
 	margin-top: var(--margin-top-10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Slider Three
@@ -3668,7 +3668,7 @@
 	display: none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Services One
@@ -3726,7 +3726,7 @@
 	right: -1px;
 	bottom: -1px;
 	opacity: 0;
-	background-color: var(--color-three);
+	background-color: var(--color-two);
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -3782,7 +3782,7 @@
 	line-height: 1em;
 	font-family: "Flaticon";
 	font-size: var(--font-60);
-	color: var(--color-four);
+	color: #ffc300;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -3806,7 +3806,7 @@
 }
 
 .service-block_one-heading a:hover{
-	
+
 }
 
 .service-block_one-text{
@@ -3855,7 +3855,7 @@
 	transform: scale(1,1) translateX(-50%);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Business One
@@ -4019,7 +4019,7 @@
 	background-repeat: no-repeat;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Counter Three
@@ -4075,7 +4075,7 @@
 	margin-top: var(--margin-top-5);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Speaker Three
@@ -4263,7 +4263,7 @@
 	margin-top: var(--margin-top-10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Speaker Four
@@ -4285,7 +4285,7 @@
 	background-repeat: no-repeat;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Speaker Tabs Two
@@ -4539,7 +4539,7 @@
 	border-radius: 50px 0px 0px 50px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonial One
@@ -4679,7 +4679,7 @@
 	margin-bottom: var(--margin-bottom-10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Price Three
@@ -4795,7 +4795,7 @@
 	background-color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	News Three
@@ -5012,7 +5012,7 @@
 	color:var(--color-three);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Clients Two
@@ -5070,7 +5070,7 @@ clients-two_column{
 	animation: marquee 20s linear infinite;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Gallery Two
@@ -5087,7 +5087,7 @@ clients-two_column{
 	display: none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Page Title
@@ -5176,7 +5176,7 @@ clients-two_column{
 	display: none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Faq Two
@@ -5200,7 +5200,7 @@ clients-two_column{
 	margin-bottom: var(--margin-bottom-25);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Faq Form
@@ -5283,7 +5283,7 @@ clients-two_column{
 	background-color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Gallery Three
@@ -5301,7 +5301,7 @@ clients-two_column{
 	margin-bottom: var(--margin-bottom-30);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonial Three
@@ -5319,7 +5319,7 @@ clients-two_column{
 	margin-bottom: var(--margin-bottom-35);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Styled Pagination
@@ -5379,7 +5379,7 @@ clients-two_column{
 
 
 
-/*** 
+/***
 
 ====================================================================
 			Coming Soon
@@ -5519,7 +5519,7 @@ clients-two_column{
 	-moz-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
-	transition:all 300ms ease;	
+	transition:all 300ms ease;
 }
 
 .coming-soon .emailed-form .form-group input:focus,
@@ -5543,7 +5543,7 @@ clients-two_column{
 	-moz-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
-	transition:all 300ms ease;	
+	transition:all 300ms ease;
 }
 
 .coming-soon .emailed-form .form-group input[type="submit"]:hover,
@@ -5781,7 +5781,7 @@ clients-two_column{
 	color:var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Privacy Section
@@ -5865,7 +5865,7 @@ clients-two_column{
 	background-color:var(--main-color-two);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Speaker Detail
@@ -6131,7 +6131,7 @@ clients-two_column{
 	margin-top: var(--margin-top-10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event Three
@@ -6148,7 +6148,7 @@ clients-two_column{
 	margin-bottom: var(--margin-bottom-30);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event Detail
@@ -6281,7 +6281,7 @@ clients-two_column{
 
 .event-detail_list li::before{
 	position: absolute;
-	content: "\f1a9"; 
+	content: "\f1a9";
 	left: 0px;
 	font-family: "Flaticon";
 	font-size: var(--font-16);
@@ -6293,7 +6293,7 @@ clients-two_column{
 	margin-bottom: var(--margin-bottom-30);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Register Section
@@ -6321,7 +6321,7 @@ clients-two_column{
 }
 
 .styled-form{
-	position:relative;	
+	position:relative;
 }
 
 .styled-form .submit-text{
@@ -6391,7 +6391,7 @@ clients-two_column{
 
 .styled-form .form-group .check-box input[type="checkbox"]:checked + label:after {
 	max-width: 20px;
-	opacity: 1;	
+	opacity: 1;
 }
 
 .styled-form .form-group .check-box label:before{
@@ -6444,29 +6444,29 @@ clients-two_column{
 .checkout-section .styled-form input[type="password"],
 .checkout-section .styled-form select{
 	line-height:26px;
-	height:44px;	
+	height:44px;
 }
 
 .styled-form select option{
-	text-indent:20px;	
+	text-indent:20px;
 }
 
 .styled-form .form-group button{
-	
+
 }
 
 .styled-form textarea{
 	resize:none;
-	height:110px;	
+	height:110px;
 }
 
 .styled-form input:focus,
 .styled-form select:focus,
 .styled-form textarea:focus{
-	border-color:var(--main-color);	
+	border-color:var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Sidebar Page Container
@@ -6489,7 +6489,7 @@ clients-two_column{
 	z-index:1;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Sidebar Widget
@@ -6768,7 +6768,7 @@ clients-two_column{
 	order: 2;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Error Section
@@ -6813,7 +6813,7 @@ clients-two_column{
 	padding:18px 40px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Blog Detail
@@ -7284,7 +7284,7 @@ blockquote{
 	background-color: var(--white-color) !important;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Comment Form
@@ -7361,7 +7361,7 @@ blockquote{
 	border:1px solid rgba(var(--black-color-rgb), 0.10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Contact Form
@@ -7439,7 +7439,7 @@ blockquote{
 .contact-form input.error,
 .contact-form select.error,
 .contact-form textarea.error{
-	border-color:#ff0000 !important;	
+	border-color:#ff0000 !important;
 }
 
 .contact-form label.error{
@@ -7450,7 +7450,7 @@ blockquote{
 	text-transform:uppercase;
 	font-size:12px;
 	color:#ff0000;
-	font-weight:500;	
+	font-weight:500;
 }
 
 .map-one{
@@ -7464,7 +7464,7 @@ blockquote{
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Contact Page Section
@@ -7577,7 +7577,7 @@ blockquote{
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Contact Page Section
@@ -7662,7 +7662,7 @@ blockquote{
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Shop Page Section
@@ -7822,7 +7822,7 @@ blockquote{
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Shop Detail Section
@@ -7914,7 +7914,7 @@ blockquote{
 
 .product-details .info-column .rating .fa{
 	display:inline-block;
-	margin-right:0px;	
+	margin-right:0px;
 }
 
 .product-details .info-column .rating .fa.light{
@@ -7992,7 +7992,7 @@ blockquote{
 }
 
 .product-details .info-column .shop-options-form{
-	
+
 }
 
 .product-details .info-column .form-group .ui-button .ui-icon{
@@ -8255,7 +8255,7 @@ blockquote{
 	background-color:#c62026;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Product Tabs Style
@@ -8272,7 +8272,7 @@ blockquote{
 }
 
 .shop-detail-section .prod-tabs{
-	position:relative;	
+	position:relative;
 }
 
 .shop-detail-section .prod-tabs .tab-btns{
@@ -8306,7 +8306,7 @@ blockquote{
 }
 
 .shop-detail-section .prod-tabs .tabs-content{
-	position:relative;	
+	position:relative;
 }
 
 .shop-detail-section .prod-tabs .tabs-content .tab{
@@ -8315,11 +8315,11 @@ blockquote{
 }
 
 .shop-detail-section .prod-tabs .tabs-content .tab.active-tab{
-	display:block;	
+	display:block;
 }
 
 .shop-detail-section .prod-tabs .tabs-content .tab p{
-	
+
 }
 
 .shop-detail-section .prod-tabs .tabs-content .tab p:last-child{
@@ -8398,7 +8398,7 @@ blockquote{
 }
 
 .shop-comment-box .shop-comment .shop-reply-comment{
-	margin-left:90px;	
+	margin-left:90px;
 }
 
 .shop-comment-box .shop-comment .author-thumb{
@@ -8589,7 +8589,7 @@ blockquote{
 }
 
 .shop-comment-form button{
-	
+
 }
 
 .related-shop-section{
@@ -8646,7 +8646,7 @@ blockquote{
 
 .shipping-form .form-group{
 	position:relative;
-	margin-bottom:20px;	
+	margin-bottom:20px;
 }
 
 .shipping-form .form-group:last-child{
@@ -8693,7 +8693,7 @@ blockquote{
 .shipping-form .form-group input:focus,
 .shipping-form .form-group select:focus,
 .shipping-form .form-group textarea:focus{
-	
+
 }
 
 .shipping-form .form-group textarea{
@@ -8721,7 +8721,7 @@ blockquote{
 
 .shipping-form .form-group input[type="submit"]:hover,
 .shipping-form button:hover{
-	
+
 }
 
 .subtotal-list{
@@ -8795,7 +8795,7 @@ blockquote{
 
 .checkout-page .default-links{
 	position:relative;
-	margin-bottom:40px;	
+	margin-bottom:40px;
 }
 
 .checkout-page .default-links li{
@@ -8824,14 +8824,14 @@ blockquote{
 
 .shop-form .form-group{
 	position:relative;
-	margin-bottom:20px;	
+	margin-bottom:20px;
 }
 
 .shop-form .form-group .field-label{
 	display:block;
 	line-height:24px;
 	margin-bottom:8px;
-	color:#797979;	
+	color:#797979;
 	font-size:15px;
 	font-weight:500;
 	text-transform:capitalize;
@@ -8840,7 +8840,7 @@ blockquote{
 .shop-form .form-group .field-label sup{
 	position:relative;
 	top:0px;
-	color:#797979;	
+	color:#797979;
 	font-size:16px;
 }
 
@@ -8887,19 +8887,19 @@ blockquote{
 }
 
 .shop-form select option{
-	text-indent:15px;	
+	text-indent:15px;
 }
 
 .shop-form textarea{
 	resize:none;
 	height:100px !important;
-	overflow:hidden;	
+	overflow:hidden;
 }
 
 .shop-form input:focus,
 .shop-form select:focus,
 .shop-form textarea:focus{
-	border-color:#ff9d00;	
+	border-color:#ff9d00;
 }
 
 /* Shop Order Box */
@@ -8962,16 +8962,16 @@ blockquote{
 .payment-options{
 	position:relative;
 	margin-top:20px;
-	margin-bottom:20px;	
+	margin-bottom:20px;
 }
 
 .checkout-page .payment-options li{
 	position:relative;
-	margin-bottom:15px;	
+	margin-bottom:15px;
 }
 
 .checkout-page .payment-options li .radio-option{
-	position:relative;		
+	position:relative;
 }
 
 .checkout-page .payment-options li .radio-option label{
@@ -8997,7 +8997,7 @@ blockquote{
 .checkout-page .payment-options li .radio-option input[type="radio"]{
 	position:absolute;
 	left:0px;
-	top:3px;	
+	top:3px;
 }
 
 .checkout-page .payment-options li .radio-option #payment-3{
@@ -9119,7 +9119,7 @@ blockquote{
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Cart Section style
@@ -9181,7 +9181,7 @@ blockquote{
 
 .cart-table thead tr th.prod-column{
 	text-align:left;
-	padding-left:40px;	
+	padding-left:40px;
 }
 
 .cart-table tbody tr td{
@@ -9199,7 +9199,7 @@ blockquote{
 }
 
 .cart-table tbody tr .qty .quantity-spinner{
-	
+
 }
 
 .cart-table tbody tr .prod-column .column-box{
@@ -9213,14 +9213,14 @@ blockquote{
 
 .column.default-column .cart-table tbody tr .qty{
 	width:110px;
-	padding-right:20px;	
+	padding-right:20px;
 }
 
 .cart-table tbody tr .prod-column .column-box .prod-thumb{
 	position:absolute;
 	width:60px;
 	left:0px;
-	top:0px;	
+	top:0px;
 }
 
 .cart-table tbody tr .prod-column .column-box .prod-thumb img{
@@ -9236,7 +9236,7 @@ blockquote{
 
 .cart-table tbody tr .btn-box{
 	font-weight:400;
-	color:#222222;	
+	color:#222222;
 	font-size:18px;
 	padding-left:20px;
 }
@@ -9273,7 +9273,7 @@ blockquote{
 }
 
 .cart-table tbody tr td{
-	vertical-align:middle;	
+	vertical-align:middle;
 }
 
 .cart-table tbody tr td.price{
@@ -9284,7 +9284,7 @@ blockquote{
 }
 
 .cart-table tbody tr td .quantity-spinner{
-	
+
 }
 
 .cart-table tbody .available-info{
@@ -9332,7 +9332,7 @@ blockquote{
 .cart-section .apply-coupon .form-group{
 	position:relative;
 	float:left;
-	margin-right:20px;	
+	margin-right:20px;
 }
 
 .cart-section .apply-coupon .form-group .coupon-btn{
@@ -9367,7 +9367,7 @@ blockquote{
 
 .cart-section .estimate-form .row{
 	margin-left:-7px;
-	margin-right:-7px;	
+	margin-right:-7px;
 }
 
 .cart-section .estimate-form .row .form-group{
@@ -9385,7 +9385,7 @@ blockquote{
 	line-height:1.7em;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Account Page Section
@@ -9399,7 +9399,7 @@ blockquote{
 }
 
 .account-tabs{
-	position:relative;	
+	position:relative;
 	min-height:450px;
 }
 
@@ -9456,7 +9456,7 @@ blockquote{
 }
 
 .account-tabs .tabs-content .tab.active-tab{
-	display:block;	
+	display:block;
 }
 
 /* Account Form */
@@ -9468,7 +9468,7 @@ blockquote{
 
 .account-form .form-group{
 	position:relative;
-	margin-bottom:20px;	
+	margin-bottom:20px;
 }
 
 .account-form .form-group label{
@@ -9538,7 +9538,7 @@ blockquote{
 
 .account-form .form-group input[type="submit"]:hover,
 .account-form button:hover{
-	
+
 }
 
 /* Dashboard Content */
@@ -9635,7 +9635,7 @@ blockquote{
 	margin-bottom:5px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Events Banner Section
@@ -9929,15 +9929,15 @@ blockquote{
 	min-height: 100px;
 	max-height: 150px;
 }
-  
+
 .waves .content {
 	position: relative;
 	height: 20vh;
 	text-align: center;
-	background-color: white; 
+	background-color: white;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Events About Section
@@ -10037,7 +10037,7 @@ blockquote{
 	margin-top:10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event Feature Section
@@ -10214,7 +10214,7 @@ blockquote{
 	line-height:1.8em;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event Schedule Section
@@ -10509,7 +10509,7 @@ blockquote{
 	margin-right:12px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event Register Section
@@ -10742,7 +10742,7 @@ blockquote{
 	cursor:pointer;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event Pricing Section
@@ -10992,7 +10992,7 @@ blockquote{
 	margin-bottom:0px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Event Team Section
@@ -11145,7 +11145,7 @@ blockquote{
 	color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	CTA Two
@@ -11179,7 +11179,7 @@ blockquote{
 	margin-bottom:55px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Banner Section
@@ -11363,7 +11363,7 @@ blockquote{
 	-ms-transform: translateY(150px);
 	-o-transform: translateY(150px);
 	transform: translateY(150px);
-	
+
 	-webkit-transition: all 900ms ease;
 	-moz-transition: all 900ms ease;
 	-ms-transition: all 900ms ease;
@@ -11386,7 +11386,7 @@ blockquote{
 }
 
 
-/*** 
+/***
 
 ====================================================================
 		Countdown Section
@@ -11516,7 +11516,7 @@ blockquote{
 	color: #0abb0e;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Top Features

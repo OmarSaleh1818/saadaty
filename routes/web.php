@@ -1,17 +1,16 @@
 <?php
 
-
-
+use App\Http\Controllers\Frontend\IndexController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+
+// home view
+Route::get('/', [IndexController::class, 'index'])->name('home');
 
 
-Route::get('/sub-categories', function() {
-    return view('frontend.sub_categories');
-});
+// stores
+Route::get('/stores/{name}', [IndexController::class, 'Stores'])->name('stores');
+Route::get('/sub-categories', [IndexController::class, 'SubCategories'])->name('sub.categories');
 
 Route::get('/blog', function() {
     return view('frontend.blog');

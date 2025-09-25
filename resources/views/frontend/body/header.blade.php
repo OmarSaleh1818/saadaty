@@ -23,10 +23,10 @@
 
 							<div class="navbar-collapse scroll-nav collapse clearfix" id="navbarSupportedContent">
 								<ul class="navigation clearfix">
-									<li class="current"><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
-									<li><a href="about.html">عنـّــــا</a></li>
-									<li><a href="{{ url('/sub-categories') }}">الفئـــات</a></li>
-									<li><a href="{{ url('/contact') }}">التواصل</a></li>
+									<li><a href="{{ route('home') }}#benner">الصفحة الرئيسية</a></li>
+									<li><a href="{{ route('home') }}#about">عنـّــــا</a></li>
+									<li><a href="{{ route('home') }}#categories">الفئـــات</a></li>
+									<li><a href="{{ route('home') }}#contact">التواصل</a></li>
 								</ul>
 							</div>
 						</nav>
