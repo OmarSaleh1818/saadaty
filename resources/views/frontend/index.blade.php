@@ -186,74 +186,75 @@
 
 						<!-- Block -->
 						<li class="accordion block active-block">
-							<div class="acc-btn active"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>What About My Learning Lab Workshop Options?</div>
+							<div class="acc-btn active"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>ما هي منصات سعادتي؟</div>
 							<div class="acc-content current">
 								<div class="content">
-									<p>Learning Lab registrations will also be rolled over to 2025 conference. The learning lab workshop schedule will be revised for 2025, and we will announce the new schedule when it is available.</p>
+									<p>
+                                        سعادتي هي منصات سعودية متخصصة في توفير جميع الخدمات والاحتياجات المتعلقة بالأعراس، شهر العسل، والمناسبات. نهدف إلى أن يجد العريس أو العروس كامل متطلباتهم في مكان واحد وبأسلوب مبسط واحترافي
+                                    </p>
 								</div>
 							</div>
 						</li>
 
 						<!-- Block -->
 						<li class="accordion block">
-							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>What questions should be ask in an conference?</div>
+							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>ما هي المناطق التي يشملها تطبيق سعادتي حالياً؟</div>
 							<div class="acc-content">
 								<div class="content">
-									<p>Learning Lab registrations will also be rolled over to 2025 conference. The learning lab workshop schedule will be revised for 2025, and we will announce the new schedule when it is available.</p>
+									<p>
+                                         في المرحلة الأولية أطلقنا خدماتنا في مدينة جدة، ونعمل على التوسع قريباً لتغطية باقي مناطق المملكة العربية السعودية بإذن الله.
+                                    </p>
 								</div>
 							</div>
 						</li>
 
 						<!-- Block -->
 						<li class="accordion block">
-							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>How Do I Rollover My Conference Registration?</div>
+							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>ما هي المنصات التي يتوفر عليها تطبيق سعادتي؟</div>
 							<div class="acc-content">
 								<div class="content">
-									<p>Learning Lab registrations will also be rolled over to 2025 conference. The learning lab workshop schedule will be revised for 2025, and we will announce the new schedule when it is available.</p>
+									<p>
+                                        يمكنكم استخدام جميع خدماتنا عبر التطبيقات الذكية المتاحة على أنظمة Android و iOS، بالإضافة إلى موقعنا الإلكتروني الذي يتيح الوصول المباشر إلى كافة الخدمات.
+                                    </p>
 								</div>
 							</div>
 						</li>
 
 						<!-- Block -->
 						<li class="accordion block">
-							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>How Do i Cancel My Hotel Reservation?</div>
+							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>هل يتطلب استخدام تطبيق سعادتي دفع رسوم معينة؟</div>
 							<div class="acc-content">
 								<div class="content">
-									<p>Learning Lab registrations will also be rolled over to 2025 conference. The learning lab workshop schedule will be revised for 2025, and we will announce the new schedule when it is available.</p>
+									<p>
+                                        لا، تطبيق سعادتي مجاني بشكل كامل ولا يفرض أي رسوم على العملاء مقابل استخدامه أو تصفح خدماته.
+                                    </p>
 								</div>
 							</div>
 						</li>
 
 						<!-- Block -->
 						<li class="accordion block">
-							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>When is The Next APQC Conference?</div>
+							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>ما هي فكرة تطبيق سعادتي بشكل مختصر؟</div>
 							<div class="acc-content">
 								<div class="content">
-									<p>Learning Lab registrations will also be rolled over to 2025 conference. The learning lab workshop schedule will be revised for 2025, and we will announce the new schedule when it is available.</p>
+									<p>
+                                        يهدف تطبيق سعادتي إلى أن يكون منصة متكاملة تجمع جميع خدمات الأعراس والمناسبات وشهر العسل في مكان واحد، مما يسهل على العملاء الوصول إلى كل احتياجاتهم بطريقة مريحة وسريعة.
+                                    </p>
 								</div>
 							</div>
 						</li>
 
 						<!-- Block -->
 						<li class="accordion block">
-							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>How Do You Prepare For a Conference?</div>
+							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>هل يمكن الدفع أو الحجز مباشرة من خلال منصات سعادتي؟</div>
 							<div class="acc-content">
 								<div class="content">
-									<p>Learning Lab registrations will also be rolled over to 2025 conference. The learning lab workshop schedule will be revised for 2025, and we will announce the new schedule when it is available.</p>
+									<p>
+                                        في المرحلة الحالية لا نوفر خاصية الدفع أو الحجز المباشر عبر المنصات. حيث نعرض قائمة واضحة وشاملة لمزودي الخدمات المسجلين لدينا، مع إمكانية التواصل المباشر معهم لإتمام الحجز أو الطلب بكل سهولة.
+                                    </p>
 								</div>
 							</div>
 						</li>
-
-						<!-- Block -->
-						<li class="accordion block">
-							<div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>What is Conferenziaworld?</div>
-							<div class="acc-content">
-								<div class="content">
-									<p>Learning Lab registrations will also be rolled over to 2025 conference. The learning lab workshop schedule will be revised for 2025, and we will announce the new schedule when it is available.</p>
-								</div>
-							</div>
-						</li>
-
 					</ul>
 				</div>
 				<div class="col-lg-6 col-md-12 col-sm-12">

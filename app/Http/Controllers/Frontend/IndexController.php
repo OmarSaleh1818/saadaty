@@ -39,7 +39,21 @@ class IndexController extends Controller
         $districts = $response->json();
 
         return view('frontend.sub_categories', compact('stores', 'districts'));
+    }
 
+    public function Store($id)
+    {
+        $response = Http::withHeaders([
+        'X-API-KEY' => '8f4d9a2b-6c1e-4b7a-9d3e-12f5a8b7c9d0'
+        ])->get("https://admin.saadatyapp.com/api/store", [
+            'store_id' => $id
+        ]);
+
+        $store = $response->json();
+        // Get only 4 items from media
+        $media = collect($store['media'])->take(4);
+
+        return view('frontend.blog', compact('store', 'media'));
     }
 
 

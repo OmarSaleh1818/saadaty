@@ -80,7 +80,7 @@
                             <!-- Post Info -->
                             <!-- <div class="news-block_two-date">2 May 2025</div> -->
                             <div class="news-block_two-image">
-                                <a href="{{ url('/blog') }}"><img src="{{ asset($store['main_image_url']) }}" alt="" /></a>
+                                <a href="{{ route('store', ['id' => $store['id']]) }}"><img src="{{ asset($store['main_image_url']) }}" alt="" /></a>
                                 <img src="{{ asset($store['main_image_url']) }}" alt="" />
                             </div>
                             <div class="news-block_two-content">
@@ -88,8 +88,8 @@
                                     <li><span class="icon fa-regular fa-calendar fa-fw"></span>by Christine</li>
                                     <li><span class="icon fa-solid fa-comments fa-fw"></span>(03) Comments</li>
                                 </ul> -->
-                                <h4 class="news-block_two-title"><a href="{{ url('/blog') }}">{{ $store['name'] }}</a></h4>
-                                <a class="news-block_two-more" href="{{ url('/blog') }}">اقرأ المزيد</a>
+                                <h4 class="news-block_two-title"><a href="{{ route('store', ['id' => $store['id']]) }}">{{ $store['name'] }}</a></h4>
+                                <a class="news-block_two-more" href="{{ route('store', ['id' => $store['id']]) }}">اقرأ المزيد</a>
                             </div>
                         </div>
                     </div>

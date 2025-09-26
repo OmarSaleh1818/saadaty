@@ -128,8 +128,9 @@
     <section class="gallery-three">
         <div class="auto-container">
             <div class="sec-title centered title-anim">
-                <h2 class="sec-title_heading">قاعة وناسة</h2>
-                <div class="sec-title_title">جـــــدة, قويزة
+                <h2 class="sec-title_heading">{{ $store['name'] }}</h2>
+                <div class="sec-title_title">
+                    {{ $store['location'] }}
                     <i class="icon fa fa-map-marker"></i>
                 </div>
             </div>
@@ -137,30 +138,31 @@
                 <div class="gallery-wrapper">
                     <!-- Right Side Small Images -->
                     <div class="gallery-thumbs">
-                        <img src="assets/images/gallery/2.jpg" alt="">
-                        <img src="assets/images/gallery/3.jpg" alt="">
-                        <img src="assets/images/gallery/4.jpg" alt="">
-                        <img src="assets/images/gallery/5.jpg" alt="">
+                        @foreach($media as $item)
+                            @if(Str::endsWith($item, '.mp4'))
+                                <video width="288px" controls>
+                                    <source src="{{ $item }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            @else
+                                <img src="{{ $item }}" alt="media" />
+                            @endif
+                        @endforeach
                     </div>
 
                     <!-- Main Big Image -->
                     <div class="gallery-main">
-                        <img src="assets/images/gallery/1.jpg" alt="Main Image">
+                        <img src="{{ $store['main_image'] }}" alt="Main Image">
 
                         <!-- View All button -->
-                        <a href="assets/images/gallery/1.jpg" class="lightbox-image see-all-btn">
+                        <a href="{{ $store['main_image'] }}" class="lightbox-image see-all-btn">
                             <i class="fa fa-camera"></i> اعرض كل الصور
                         </a>
 
                         <!-- Hidden images for lightbox -->
-                        <a href="assets/images/gallery/2.jpg" class="lightbox-image" style="display:none;"></a>
-                        <a href="assets/images/gallery/3.jpg" class="lightbox-image" style="display:none;"></a>
-                        <a href="assets/images/gallery/4.jpg" class="lightbox-image" style="display:none;"></a>
-                        <a href="assets/images/gallery/5.jpg" class="lightbox-image" style="display:none;"></a>
-                        <a href="assets/images/gallery/6.jpg" class="lightbox-image" style="display:none;"></a>
-                        <a href="assets/images/gallery/7.jpg" class="lightbox-image" style="display:none;"></a>
-                        <a href="assets/images/gallery/8.jpg" class="lightbox-image" style="display:none;"></a>
-                        <a href="assets/images/gallery/9.jpg" class="lightbox-image" style="display:none;"></a>
+                        @foreach($store['media'] as $url)
+                            <a href="{{ $url }}" class="lightbox-image" style="display:none;"></a>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -172,7 +174,7 @@
                             <div>
                                 <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">السعـــر</p>
                                 <p class="black-color mb-0">
-                                   من 180 إلى 500
+                                   من {{ $store['price_from'] }} إلى {{ $store['price_to'] }}
                                 </p>
                             </div>
                             <div class="feature-block_one-icon">
@@ -195,7 +197,7 @@
                                     الخبرة بالسنــوات
                                 </p>
                                 <p class="font-size-16 black-color mb-0 text-center">
-                                   18 +
+                                   {{ $store['experience'] }} +
                                 </p>
                             </div>
                              <div class="feature-block_one-icon">
@@ -208,7 +210,7 @@
                                     الفريــــــق
                                 </p>
                                 <p class="font-size-16 black-color mb-0 text-center">
-                                    25 +
+                                    {{ $store['team_size'] }} +
                                 </p>
                             </div>
                              <div class="feature-block_one-icon">
@@ -221,7 +223,7 @@
                                     العربــــون
                                 </p>
                                 <p class="font-size-16 black-color mb-0 text-center">
-                                    نعم
+                                    {{ $store['forward'] }}
                                 </p>
                             </div>
                             <div class="feature-block_one-icon">
@@ -232,9 +234,7 @@
                 </div>
                 <div class="author-box">
                     <div class="author-text">
-                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                        حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
-                        إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد
+                        {{ $store['description'] }}
                     </div>
                 </div>
             </div>
@@ -251,29 +251,19 @@
                     </div>
 
                     <div class="row g-3">
-                        <!-- Service 1 -->
-                        <div class="col-12">
-                            <div class="card shadow-sm h-100 border-0">
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <i class="bi bi-gear-fill fs-1 text-primary"></i>
+                        <!-- Services -->
+                        @foreach ($store['services'] as $Service )
+                            <div class="col-12">
+                                <div class="card shadow-sm h-100 border-0">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <i class="bi bi-gear-fill fs-1 text-primary"></i>
+                                        </div>
+                                        <p class="card-text">{{ $Service }}</p>
                                     </div>
-                                    <p class="card-text">وصف قصير يوضح ماهية الخدمة بطريقة جذابة وبسيطة للمستخدم</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Service 2 -->
-                        <div class="col-12">
-                            <div class="card shadow-sm h-100 border-0">
-                                <div class="card-body text-center">
-                                    <div class="mb-3">
-                                        <i class="bi bi-laptop-fill fs-1 text-success"></i>
-                                    </div>
-                                    <p class="card-text">وصف قصير يوضح ماهية الخدمة بطريقة جذابة وبسيطة للمستخدم</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
 
@@ -285,15 +275,31 @@
                     </div>
 
                     <div class="list-group shadow-sm">
-                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            ملف تعريفي <i class="bi bi-file-earmark-pdf text-danger fs-5"></i>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            عرض أسعار <i class="bi bi-file-earmark-excel text-success fs-5"></i>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            كتيّب خدمات <i class="bi bi-file-earmark-text text-primary fs-5"></i>
-                        </a>
+                        @foreach($store['attachments'] as $file)
+                            @php
+                                $extension = pathinfo($file, PATHINFO_EXTENSION);
+                                $icon = 'bi-file-earmark-text text-primary'; // default
+
+                                switch(strtolower($extension)) {
+                                    case 'pdf':
+                                        $icon = 'bi-file-earmark-pdf text-danger';
+                                        break;
+                                    case 'xls':
+                                    case 'xlsx':
+                                        $icon = 'bi-file-earmark-excel text-success';
+                                        break;
+                                    case 'doc':
+                                    case 'docx':
+                                        $icon = 'bi-file-earmark-word text-primary';
+                                        break;
+                                }
+                            @endphp
+
+                            <a href="{{ $file }}" target="_blank"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                عرض <i class="bi {{ $icon }} fs-5"></i>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
 
@@ -325,7 +331,7 @@
                             <div class="location-info_block-content">
                                 <div class="location-info_block-icon flaticon-map"></div>
                                 <strong>العنوان</strong>
-                                203 Asfan, Jeddah, KSA
+                                {{ $store['location'] }}
                             </div>
                         </div>
                     </div>
@@ -336,7 +342,7 @@
                             <div class="location-info_block-content">
                                 <div class="location-info_block-icon flaticon-email-1"></div>
                                 <strong>الايميل</strong>
-                                envato@gmail.com
+                                {{ $store['email'] }}
                             </div>
                         </div>
                     </div>
@@ -347,17 +353,17 @@
                                 <h6 class="social-title">التواصــــل</h6>
                                 <ul class="social-box">
                                     <li>
-                                        <a href="https://www.twitter.com/" target="_blank" class="twitter">
+                                        <a href="{{ $store['twitter'] }}" target="_blank" class="twitter">
                                             <i class="fa-brands fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.snapchat.com/" target="_blank" class="snapchat">
+                                        <a href="{{ $store['snapchat'] }}" target="_blank" class="snapchat">
                                             <i class="fa-brands fa-snapchat-ghost"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://dribbble.com/" target="_blank" class="dribbble">
+                                        <a href="{{ $store['instagram'] }}" target="_blank" class="dribbble">
                                             <i class="fa-brands fa-dribbble"></i>
                                         </a>
                                     </li>
