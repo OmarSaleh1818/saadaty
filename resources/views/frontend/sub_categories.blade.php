@@ -6,7 +6,7 @@
 @section('content')
 
     <!-- Page Title -->
-	<section class="banner-section-two" style="background-image:url(assets/images/background/11.jpg)">
+	<section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/11.jpg') }})">
 		<div class="auto-container">
 			<div class="d-flex justify-content-between align-items-center flex-wrap">
 				<div class="left-box">
@@ -23,7 +23,7 @@
 	<!-- End Page Title -->
 
 	<!-- Sidebar Page Container -->
-	<section class="news-two" id="blog" style="background-image:url(assets/images/background/4.jpg)">
+	<section class="news-two" id="blog" style="background-image:url({{ asset('assets/images/background/4.jpg') }})">
 		<div class="auto-container">
 			<div class="sec-title">
 				<div class="text-center">

@@ -26,7 +26,9 @@ class IndexController extends Controller
     {
         $response = Http::withHeaders([
             'X-API-KEY' => '8f4d9a2b-6c1e-4b7a-9d3e-12f5a8b7c9d0'
-        ])->get('https://admin.saadatyapp.com/api/stores/{$id}');
+        ])->get('https://admin.saadatyapp.com/api/stores',[
+            'category' => $id
+        ]);
 
         // Convert response to array
         $stores = $response->json();

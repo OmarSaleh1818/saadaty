@@ -119,7 +119,7 @@
 </style>
 
     <!-- Page Title -->
-    <section class="banner-section-two" style="background-image:url(assets/images/background/11.jpg)">
+    <section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/11.jpg') }})">
 
     </section>
     <!-- End Page Title -->
@@ -309,7 +309,7 @@
     <!-- End Speakers Four -->
 
     <!-- Google Map -->
-    <section class="location-one" style="background-image:url(assets/images/background/5.jpg)">
+    <section class="location-one" style="background-image:url({{ asset('assets/images/background/5.jpg') }})">
         <div class="auto-container">
             <div class="sec-title title-anim centered">
                 <h2 class="sec-title_heading">الموقع</h2>
