@@ -10,8 +10,8 @@
 		<div class="auto-container">
 			<div class="d-flex justify-content-between align-items-center flex-wrap">
 				<div class="left-box">
-					<div class="page-title_big">القاعــــــــــات</div>
-					<h2 class="page-title_heading">القاعــــــــــات</h2>
+					<div class="page-title_big">{{ $categoryName }}</div>
+					<h2 class="page-title_heading">{{ $categoryName }}</h2>
 				</div>
 				<!-- <ul class="bread-crumb clearfix">
 					<li><a href="index.html">Home</a></li>
@@ -29,7 +29,7 @@
 				<div class="text-center">
 					<div class="title-box title-anim">
 						<!-- <div class="sec-title_title">Blog % Articles</div> -->
-						<h2 class="sec-title_heading">القاعــــــــــات</h2>
+						<h2 class="sec-title_heading">{{ $categoryName }}</h2>
 					</div>
 
 				</div>
@@ -48,7 +48,7 @@
 						</div>
 
 						<!-- Neighborhood Selection -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="col-lg-4 col-md-6 col-sm-12 mt-2">
 							<label for="neighborhood" class="form-label">اختر الحي</label>
 							<select class="form-control select2" name="district" required>
                                 @foreach ($districts as $district)

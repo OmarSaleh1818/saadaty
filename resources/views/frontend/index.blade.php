@@ -74,7 +74,7 @@
 				<div class="about-two_image-column col-lg-6 col-md-12 col-sm-12">
 					<div class="about-two_image-inner">
 						<div class="about-two_image titlt" data-tilt data-tilt-max="5">
-							<img src="assets/images/resource/about-1.png" alt="" />
+							<img src="assets/images/resource/about1.png" style="border-radius: 25px;" alt="" />
 						</div>
 
 					</div>
@@ -119,7 +119,7 @@
 						<div class="service-block_one-icon flaticon-book"></div>
 						<h4 class="service-block_one-heading"><a href="speaker-detail.html">الرؤيـــــة</a></h4>
 						<div class="service-block_one-text">
-                            أن نكون الخيار الأول في تجهيز الأعراس والمناسبات من خلال تقديم العروض والخدمات المتنوعة بجودة عالية واسعار تنافسية وذلك من خلال تطبيق إمن وموثوق وسهل الاستخدام
+                            أن نكون الخيار الأول في تجهيز الأعراس والمناسبات من خلال تقديم العروض والخدمات المتنوعة بجودة عالية وذلك من خلال تطبيق امن وسهل الاستخدام
                         </div>
 					</div>
 				</div>
@@ -325,7 +325,7 @@
 							<div class="download-buttons">
                                 <a href="https://apps.apple.com/sa/app/saadaty/id6450555553" target="_blank">
                                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                    alt="Download on the App Store">
+                                    alt="Download on the App Store" style="height: 70px; margin-top: 15px;">
                                 </a>
                                 <a href="https://play.google.com/store/apps/details?id=com.group.saadaty" target="_blank">
                                 <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"

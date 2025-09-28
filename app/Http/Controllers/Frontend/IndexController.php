@@ -33,6 +33,8 @@ class IndexController extends Controller
         // Convert response to array
         $stores = $response->json();
 
+        $categoryName = collect($stores)->firstWhere('category_id', (string) $id)['category'] ?? null;
+
         $response = Http::withHeaders([
             'X-API-KEY' => '8f4d9a2b-6c1e-4b7a-9d3e-12f5a8b7c9d0'
         ])->get('https://admin.saadatyapp.com/api/districts');
@@ -40,7 +42,7 @@ class IndexController extends Controller
         // Convert response to array
         $districts = $response->json();
 
-        return view('frontend.sub_categories', compact('stores', 'districts'));
+        return view('frontend.sub_categories', compact('stores', 'districts', 'categoryName'));
     }
 
     public function Store($id)
