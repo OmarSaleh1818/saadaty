@@ -1,5 +1,8 @@
 @extends('frontend.main')
 
+@section('head')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+@endsection
 @section('content')
 
 <style>
@@ -152,17 +155,14 @@
 
                     <!-- Main Big Image -->
                     <div class="gallery-main">
-                        <img src="{{ $store['main_image'] }}" alt="Main Image">
+                        <!-- الصورة الرئيسية تبقى كما هي -->
+                        <img id="gallery-trigger" src="{{ $store['main_image'] }}" alt="Main Image"
+                            style="cursor:pointer; max-width:100%;">
 
-                        <!-- View All button -->
-                        <a href="{{ $store['main_image'] }}" class="lightbox-image see-all-btn">
+                        <!-- زر عرض الكل -->
+                        <a href="#" id="open-gallery" class="see-all-btn">
                             <i class="fa fa-camera"></i> اعرض كل الصور
                         </a>
-
-                        <!-- Hidden images for lightbox -->
-                        @foreach($store['media'] as $url)
-                            <a href="{{ $url }}" class="lightbox-image" style="display:none;"></a>
-                        @endforeach
                     </div>
                 </div>
             </div>
@@ -382,4 +382,52 @@
     </section>
     <!-- End Google Map -->
 
+@endsection
+@section('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // الجلب الآمن للروابط من الجانب الخادمي
+            const mainImage = @json($store['main_image']);
+            const mediaUrls = @json($store['media'] ?? []);
+
+            // ضم الصورة الرئيسية إلى قائمة الوسائط إذا لم تكن موجودة
+            if (!mediaUrls.includes(mainImage)) {
+                mediaUrls.unshift(mainImage);
+            }
+
+            // بناء عناصر المعرض مع كشف امتداد الملف لتحديد نوعه
+            const items = mediaUrls.map(url => {
+                const ext = (url.split('.').pop() || '').split(/#|\?/)[0].toLowerCase();
+                const isVideo = ['mp4', 'webm', 'ogg'].includes(ext);
+                return {
+                    src: url,
+                    type: isVideo ? 'video' : 'image'
+                };
+            });
+
+            // دالة لفتح المعرض برمجياً
+            function openGallery(startIndex = 0) {
+                if (window.Fancybox && Fancybox.show) {
+                    Fancybox.show(items, { startIndex });
+                } else {
+                    console.warn('Fancybox not loaded. تأكد من إضافة مكتبة Fancybox.');
+                }
+            }
+
+            // إرفاق حدث للنقر على الصورة الرئيسية وزر "اعرض كل الصور"
+            const trigger = document.getElementById('gallery-trigger');
+            const openBtn = document.getElementById('open-gallery');
+
+            if (trigger) {
+                trigger.addEventListener('click', () => openGallery(0));
+            }
+            if (openBtn) {
+                openBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openGallery(0);
+                });
+            }
+        });
+    </script>
 @endsection
