@@ -52,22 +52,23 @@
                             <div class="footer-widget news-widget">
                                 <h4 class="footer-two_title">معلومـــات</h4>
                                 <ul class="footer-two_contact-list">
-                                    <li><span class="icon fa-solid fa-phone fa-fw"></span>+966502154852
+                                    <li><span class="icon fa-solid fa-phone fa-fw"></span>+966503732107
                                     </li>
                                     <li><span class="icon fa-solid fa-envelope fa-fw"></span> <a
-                                            href="mailto:seo@saadaty.com">seo@saadaty.com</a></li>
-                                    <li><span class="icon fa-solid fa-map-marker fa-fw"></span>30 broklyn golden
-                                        street. New York</li>
+                                            href="mailto:info@saadatyapp.com">info@saadatyapp.com</a></li>
+                                    <li><span class="icon fa-solid fa-map-marker fa-fw"></span>
+                                         ٧٠٦٢، محمد بن عبدالواحد الطبري، حي النخيل، ٤٣٥٧
+                                    </li>
                                 </ul>
                                 <!-- Social Box -->
                                 <ul class="footer-two_socials">
-                                    <li><a href="https://www.twitter.com/"
+                                    <li><a href="https://x.com/saadaty107"
                                             class="fa-brands fa-twitter fa-fw"></a></li>
-                                    <li><a href="https://www.instagram.com/"
+                                    <li><a href="https://www.instagram.com/saadaty1007/"
                                             class="fa fa-instagram"></a></li>
-                                    <li><a href="https://dribbble.com/" class="fa-brands fa-snapchat fa-fw"></a>
+                                    <li><a href="https://www.snapchat.com/@saadaty107" class="fa-brands fa-snapchat fa-fw"></a>
                                     </li>
-                                    <li><a href="https://www.whatsapp.com/"
+                                    <li><a href="https://api.whatsapp.com/send/?phone=966503732107&text&type=phone_number&app_absent=0"
                                             class="fa-brands fa-whatsapp fa-fw"></a></li>
                                 </ul>
                             </div>
