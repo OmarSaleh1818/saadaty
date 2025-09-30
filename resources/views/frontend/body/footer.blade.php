@@ -65,7 +65,7 @@
                                     <li><a href="https://x.com/saadaty107"
                                             class="fa-brands fa-twitter fa-fw"></a></li>
                                     <li><a href="https://www.instagram.com/saadaty1007/"
-                                            class="fa fa-instagram"></a></li>
+                                            class="fa-brands fa-instagram fa-fw"></a></li>
                                     <li><a href="https://www.snapchat.com/@saadaty107" class="fa-brands fa-snapchat fa-fw"></a>
                                     </li>
                                     <li><a href="https://api.whatsapp.com/send/?phone=966503732107&text&type=phone_number&app_absent=0"

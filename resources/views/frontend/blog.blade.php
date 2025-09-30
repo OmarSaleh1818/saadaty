@@ -46,7 +46,7 @@
         grid-gap: 15px;
     }
 
-    .gallery-thumbs img {
+    .gallery-thumbs img, .gallery-thumbs video {
         width: 100%;
         height: 100%;
         border-radius: 15px;
@@ -54,20 +54,18 @@
     }
 
 	.author-box {
-		background: #f9f9f9;
-		border: 1px solid #e0e0e0;
-		border-radius: 12px;
-		padding: 20px 25px;
-		margin: 20px 0;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-	}
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 15px 16px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
 
-	.author-text {
-		font-size: 18px;
-		line-height: 1.8;
-		color: #444;
-		text-align: center;
-	}
+    .author-box .author-text {
+        font-size: 15px;
+        color: #333;
+    }
 
 	.banner-section-two {
 		padding: 0px 0px 120px;
@@ -114,11 +112,14 @@
         transform: translateY(-4px);
     }
 
+    .gm-style .review-box {
+        display: none;
+    }
+
     /* Custom colors per network */
     .social-box a.twitter:hover   { background: #1da1f2; }
     .social-box a.snapchat:hover  { background: #fffc00; color: #000; }
     .social-box a.dribbble:hover  { background: #ea4c89; }
-    .social-box a.linkedin:hover  { background: #0a66c2; }
 </style>
 
     <!-- Page Title -->
@@ -133,7 +134,7 @@
             <div class="sec-title centered title-anim">
                 <h2 class="sec-title_heading">{{ $store['name'] }}</h2>
                 <div class="sec-title_title">
-                    {{ $store['location'] }}
+                    {{ $store['city'] }}, {{ $store['district'] }}
                     <i class="icon fa fa-map-marker"></i>
                 </div>
             </div>
@@ -325,13 +326,12 @@
                 <!-- Info Column -->
                 <div class="location-one_info-column col-lg-4 col-md-12 col-sm-12">
 
-                    <!-- Location Info Block -->
                     <div class="location-info_block">
                         <div class="location-info_block-inner">
                             <div class="location-info_block-content">
-                                <div class="location-info_block-icon flaticon-map"></div>
-                                <strong>العنوان</strong>
-                                {{ $store['location'] }}
+                                <div class="location-info_block-icon flaticon-user-1"></div>
+                                <strong>الاســم</strong>
+                                {{ $store['user']['name'] }}
                             </div>
                         </div>
                     </div>
@@ -350,11 +350,24 @@
                     <!-- Location Info Block -->
                     <div class="location-info_block">
                         <div class="location-info_block-inner">
+                            <div class="location-info_block-content">
+                                <div class="location-info_block-icon flaticon-phone"></div>
+                                <strong>رقم الجوال</strong>
+                                <span id="mobile-placeholder" style="color:blue;cursor:pointer; text-decoration:underline;">
+                                    اضغط هنا
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location Info Block -->
+                    <div class="location-info_block">
+                        <div class="location-info_block-inner">
                                 <h6 class="social-title">التواصــــل</h6>
                                 <ul class="social-box">
                                     <li>
                                         <a href="{{ $store['twitter'] }}" target="_blank" class="twitter">
-                                            <i class="fa-brands fa-twitter"></i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style="height: 25px;"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/></svg>
                                         </a>
                                     </li>
                                     <li>
@@ -364,12 +377,7 @@
                                     </li>
                                     <li>
                                         <a href="{{ $store['instagram'] }}" target="_blank" class="dribbble">
-                                            <i class="fa-brands fa-dribbble"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.linkedin.com/" target="_blank" class="linkedin">
-                                            <i class="fa-brands fa-linkedin"></i>
+                                            <i class="fa-brands fa-instagram"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -428,6 +436,53 @@
                     openGallery(0);
                 });
             }
+        });
+    </script>
+
+    <script>
+        document.getElementById("mobile-placeholder").addEventListener("click", function () {
+            let placeholder = this;
+            let userId = {{ $store['user']['id'] }};
+            let url = `https://admin.saadatyapp.com/api/getMobile?user_id=${userId}`;
+
+            placeholder.textContent = "جاري التحميل...";
+
+            fetch(url, {
+                method: "GET",
+                headers: {
+                    "X-API-KEY": "8f4d9a2b-6c1e-4b7a-9d3e-12f5a8b7c9d0",
+                    "Accept": "application/json"
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("HTTP error " + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                let mobile = null;
+
+                // احتمال يرجع Array أو Object
+                if (Array.isArray(data) && data.length > 0 && data[0].mobile) {
+                    mobile = data[0].mobile;
+                } else if (data.mobile) {
+                    mobile = data.mobile;
+                }
+
+                if (mobile) {
+                    placeholder.textContent = mobile;
+                    placeholder.style.color = "#000";
+                    placeholder.style.cursor = "default";
+                    placeholder.style.textDecoration = "none";
+                } else {
+                    placeholder.textContent = "لم يتم العثور على الرقم";
+                }
+            })
+            .catch(error => {
+                console.error("Fetch error:", error);
+                placeholder.textContent = "خطأ في تحميل الرقم";
+            });
         });
     </script>
 @endsection

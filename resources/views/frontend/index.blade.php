@@ -258,7 +258,7 @@
 					</ul>
 				</div>
 				<div class="col-lg-6 col-md-12 col-sm-12">
-					<div class="faq-two_form-box" style="background-image:url(assets/images/background/faq.jpg)">
+					<div class="faq-two_form-box" style="background-image:url(assets/images/background/contact.png)">
 						<h3 class="faq-two_form-title">التواصــــــل</h3>
 
 						<!-- Faq Form -->
