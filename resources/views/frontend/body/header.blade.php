@@ -6,7 +6,7 @@
 				<div class="d-flex justify-content-between align-items-center flex-wrap">
 
 					<div class="logo-box">
-						<div class="logo"><a href="index.html"><img src="{{ asset('assets/images/logo-saadaty.png') }}" width="100px" height="100px" alt="" title=""></a></div>
+						<div class="logo"><a href="{{ route('home') }}#banner"><img src="{{ asset('assets/images/logo-saadaty.png') }}" width="100px" height="100px" alt="" title=""></a></div>
 					</div>
 
 					<div class="nav-outer">
@@ -36,7 +36,9 @@
 					<div class="outer-box d-flex align-items-center flex-wrap">
 
 						<!-- Search Btn -->
-						<div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
+						<div class="search-box-btn">
+                            <a href="https://admin.saadatyapp.com" class="btn btn-default">بوابة تسجيل مزودين الخدمات</a>
+                        </div>
 
 
 
@@ -72,7 +74,9 @@
 				<div class="outer-box d-flex align-items-center flex-wrap">
 
 					<!-- Search Btn -->
-					<div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
+					<div class="search-btn">
+                        <a href="https://admin.saadatyapp.com" class="btn btn-default">بوابة تسجيل مزودين الخدمات</a>
+                    </div>
 
 					<!-- Mobile Navigation Toggler -->
 					<div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>

@@ -32,70 +32,109 @@
     .download-buttons img:hover {
         transform: scale(1.05);
     }
+
+    .btn-style-one {
+         border-radius: 30px;
+         margin-top: 20px
+    }
+
+    .contact-form-box {
+        direction: rtl;
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+        transition: all 0.3s ease;
+    }
+
+    .contact-form-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-form-title {
+        color: black;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    .form-control:focus {
+        border-color: black;
+        box-shadow: 0 0 0 0.15rem rgba(242, 177, 0, 0.25);
+    }
+
+    .custom-btn {
+        background-color: #F2B100;
+        color: #fff;
+        border: none;
+    }
+
+    .custom-btn:hover {
+        background-color: #d99b00; /* لون أغمق عند المرور */
+    }
+
+    /* افتراضياً لا شيء */
+.text-center h2 {
+    color: white;
+    margin-top: -80px; /* للكمبيوتر */
+}
+
+/* عند الشاشات الصغيرة (مثلاً أقل من 768px) */
+@media (max-width: 767px) {
+    .text-center h2 {
+        margin-top: 0 !important; /* إزالة الـ margin على الجوال */
+    }
+}
+
 </style>
 <!-- Slider One -->
-	<section class="slider-two" id="benner">
-		<div class="main-slider-carousel owl-carousel owl-theme">
-			<div class="slider-two_slide">
-				<div class="slider-two_icon-one" style="background-image:url({{ asset('assets/images/main-slider/pattern-3.png') }})"></div>
-				<div class="slider-two_icon-two" style="background-image:url({{ asset('assets/images/main-slider/pattern-4.png') }})"></div>
-				<div class="slider-two_icon-three" style="background-image:url({{ asset('assets/images/main-slider/pattern-5.png') }})"></div>
-				<div class="slider-two_cloud-layer" style="background-image:url({{ asset('assets/images/main-slider/cloud.png') }})"></div>
-				<div class="slider-two_image-layer" style="background-image:url({{ asset('assets/images/main-slider/image-2.jpg') }})"></div>
-				<div class="auto-container">
-					<div class="row clearfix">
-						<div class="slider-two_image-column col-lg-6 col-md-12 col-sm-12">
-							<div class="slider-two_image">
-								<img src="{{ asset('assets/images/main-slider/wedding.png') }}" alt="" />
-							</div>
-						</div>
-						<!-- Content Column -->
-						<div class="slider-two_content col-lg-6 col-md-12 col-sm-12">
-							<div class="slider-two_content-inner">
-								<h2 class="slider-two_heading">لا تشيل هم! مع سعادتــــي زفافك جاهز بضغطة زر</h2>
-							</div>
-						</div>
-
-					</div>
-				</div>
+	<section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/saadaty_banner.png') }})">
+		<div class="auto-container">
+			<div class="text-center mb-5">
+					<h2>نحو ليلة عمر خالدة … سعادتي ترافقك في كل التفاصيل</h2>
 			</div>
+            <div class="about-one_button" style="text-align: center;">
+                <a href="{{ route('home') }}#contact" class="theme-btn btn-style-one">
+                    <span class="btn-wrap">
+                        <span class="text-one" style="font-size: 18px; color: white;">تواصل معنا</span>
+                        <span class="text-two" style="font-size: 18px; color: white;">تواصل معنا</span>
+                    </span>
+                </a>
+            </div>
 		</div>
 	</section>
 
 	<!-- About Two -->
 	<section class="about-two" id="about">
 		<div class="about-two_pattern-one" style="background-image:url(assets/images/background/pattern-15.png)"></div>
-		<div class="about-two_pattern-two" style="background-image:url(assets/images/background/pattern-16.png)"></div>
 		<div class="about-two_pattern-three" style="background-image:url(assets/images/background/pattern-18.png)"></div>
 		<div class="auto-container">
 			<div class="row clearfix">
 
-				<!-- Image Column -->
+                <!-- Content Column -->
+				<div class="about-two_content-column col-lg-6 col-md-12 col-sm-12 mt-5">
+					<div class="about-two_content-inner">
+						<div class="sec-title title-anim" style="text-align: center;">
+							<h2 class="sec-title_heading">عن <span style="color: #F2B100;">سعادتي</span></h2>
+							<div class="sec-title_text">سعادتي ، يتحول زفافك من حلم إلى لوحة تفيض بالأناقة والبهجة نجمع لك كل ما تحتاجه في مكان واحد، لنحوّل كل تفصيلة إلى تجربة مترفة وسهلة ... <span style="color: #F2B100;">سعادتي</span> حيث يلتقي الحلم بالواقع ويُصبح الفرح أرقى مما تتصور</div>
+						</div>
+
+						<div class="about-one_button" style="text-align: center;">
+							<a href="#mission" class="theme-btn btn-style-one">
+								<span class="btn-wrap">
+									<span class="text-one" style="font-size: 18px; color: white;">اكتشــف المزيــد</span>
+									<span class="text-two" style="font-size: 18px; color: white;">اكتشــف المزيــد</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+                <!-- Image Column -->
 				<div class="about-two_image-column col-lg-6 col-md-12 col-sm-12">
 					<div class="about-two_image-inner">
 						<div class="about-two_image titlt" data-tilt data-tilt-max="5">
 							<img src="assets/images/resource/about1.png" style="border-radius: 25px;" alt="" />
 						</div>
 
-					</div>
-				</div>
-
-                <!-- Content Column -->
-				<div class="about-two_content-column col-lg-6 col-md-12 col-sm-12 mt-5">
-					<div class="about-two_content-inner">
-						<div class="sec-title title-anim" style="text-align: center; margin-top: 50px;">
-							<h2 class="sec-title_heading">تطبيق سعادتي</h2>
-							<div class="sec-title_text">سعادتي هي منصة سعودية متخصصه في توفير جميع خدمات ، احتياجات وتجهيزات الأعراس وشهر العسل والمناسبات</div>
-						</div>
-
-						<div class="about-one_button" style="text-align: center;">
-							<a href="#mission" class="theme-btn btn-style-one">
-								<span class="btn-wrap">
-									<span class="text-one" style="font-size: 18px">تصفـــح</span>
-									<span class="text-two" style="font-size: 18px">تصفـــح</span>
-								</span>
-							</a>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -117,9 +156,9 @@
 				<div class="service-block_one col-lg-6 col-md-6 col-sm-12">
 					<div class="service-block_one-inner wow fadeInRight animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInRight;">
 						<div class="service-block_one-icon flaticon-book"></div>
-						<h4 class="service-block_one-heading"><a href="speaker-detail.html">الرؤيـــــة</a></h4>
+						<h4 class="service-block_one-heading"><a href="speaker-detail.html">رؤيتنــا</a></h4>
 						<div class="service-block_one-text">
-                            أن نكون الخيار الأول في تجهيز الأعراس والمناسبات من خلال تقديم العروض والخدمات المتنوعة بجودة عالية وذلك من خلال تطبيق امن وسهل الاستخدام
+                            أن تصبح سعادتي الوجهة الأولى لكل من يسعى لزفاف استثنائي، حيث يلتقي الحلم بالواقع، ويعيش كل عروس وعريس تجربة فرح فريدة ومتفردة
                         </div>
 					</div>
 				</div>
@@ -130,7 +169,7 @@
 						<div class="service-block_one-icon flaticon-connection"></div>
 						<h4 class="service-block_one-heading"><a href="speaker-detail.html">المهمــــة</a></h4>
 						<div class="service-block_one-text">
-                            مهمتنا تكمن في تقديم نموذج متميز وفعال من حيث التكلفة والجودة العالية للمنتجات والأمان عند الاستخدام ، بالإضافة إلى الحرص على كسب ثقة العملاء
+                            تقديم تجربة متكاملة ومترفة لتجهيز حفلات الزفاف، تجمع بين البساطة والأناقة، لنمنح كل عروس وعريس راحة البال وجمال الذكريات في يوم العمر
                         </div>
 					</div>
 				</div>
@@ -148,7 +187,7 @@
 
 			<div class="sec-title title-anim centered">
 
-				<h2 class="sec-title_heading">الفئــــــــــات</h2>
+				<h2 class="sec-title_heading">خدماتنــا الاستثنــائية</h2>
 			</div>
 
 			<div class="row clearfix">
@@ -164,7 +203,10 @@
                                 <ul class="news-block_one-meta">
                                 </ul>
                                 <h5 class="news-block_one-title"><a href="{{ route('stores', ['id' => $category['id']]) }}">{{ $category['name'] }}</a></h5>
-                                <a class="news-block_one-more" href="{{ route('stores', ['id' => $category['id']]) }}">اقرا المزيد</a>
+                                <a href="{{ route('stores', ['id' => $category['id']]) }}"
+                                style="display:inline-block; background-color:#F2B100; color:#fff; padding:10px 25px; border-radius:25px; text-decoration:none; margin-top:15px; font-weight:600;">
+                                 عــرض التفــاصيل
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -258,44 +300,35 @@
 					</ul>
 				</div>
 				<div class="col-lg-6 col-md-12 col-sm-12">
-					<div class="faq-two_form-box" style="background-image:url(assets/images/background/contact.png)">
-						<h3 class="faq-two_form-title">التواصــــــل</h3>
+                    <div class="contact-form-box p-4 shadow rounded-4 bg-white">
+                        <h3 class="contact-form-title text-center mb-4">التواصــــــل</h3>
 
-						<!-- Faq Form -->
-						<div class="faq-form">
-							<form method="post" action="https://html.themerange.net/conat/conat/blog.html">
+                        <form method="post" action="#">
+                            <div class="mb-3">
+                                <input type="text" name="name" class="form-control form-control-lg text-end" placeholder="الاســم" required>
+                            </div>
 
-								<div class="form-group">
-									<input type="text" name="username" placeholder="الاســم" required="">
-								</div>
+                            <div class="mb-3">
+                                <input type="email" name="email" class="form-control form-control-lg text-end" placeholder="الايميــل" required>
+                            </div>
 
-								<div class="form-group">
-									<input type="text" name="username" placeholder="الايميــل" required="">
-								</div>
+                            <div class="mb-3">
+                                <input type="text" name="phone" class="form-control form-control-lg text-end" placeholder="رقــم الجوال" required>
+                            </div>
 
-								<div class="form-group">
-									<input type="text" name="phone" placeholder="رقــم الجوال" required="">
-								</div>
+                            <div class="mb-4">
+                                <textarea name="message" rows="4" class="form-control form-control-lg text-end" placeholder="الرسالـــة" required></textarea>
+                            </div>
 
-								<div class="form-group">
-									<textarea class="" name="message" placeholder="الرسالـــة"></textarea>
-								</div>
+                            <div class="text-center">
+                                <button type="submit" class="btn custom-btn px-5 py-2 rounded-pill fw-bold">
+                                    إرســــال
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-								<div class="form-group">
-									<!-- Button Box -->
-									<div class="button-box">
-										<button class="theme-btn submit-btn">
-											إرســــال
-										</button>
-									</div>
-								</div>
-
-							</form>
-						</div>
-						<!-- End Comment Form -->
-
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>

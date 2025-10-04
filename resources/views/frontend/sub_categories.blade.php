@@ -5,19 +5,46 @@
 @endsection
 @section('content')
 
+<style>
+    .news-block_two-image {
+    width: 100%;
+    height: 200px; /* يمكنك تغيير الارتفاع */
+    overflow: hidden;
+    border-radius: 25px 25px 0 0; /* زوايا مدورة من الأعلى */
+}
+
+.news-block_two-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* تحريك بسيط */
+}
+
+/* تأثير عند المرور */
+.news-block_two-image:hover img {
+    transform: scale(1.05);
+}
+
+/* تأثير عند النقر */
+.news-block_two-image:active img {
+    transform: scale(0.95);
+}
+</style>
     <!-- Page Title -->
-	<section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/11.jpg') }})">
+	<section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/saadaty_banner.png') }})">
 		<div class="auto-container">
-			<div class="d-flex justify-content-between align-items-center flex-wrap">
-				<div class="left-box">
-					<div class="page-title_big">{{ $categoryName }}</div>
-					<h2 class="page-title_heading">{{ $categoryName }}</h2>
-				</div>
-				<!-- <ul class="bread-crumb clearfix">
-					<li><a href="index.html">Home</a></li>
-					<li>Blog</li>
-				</ul> -->
+			<div class="text-center mb-5">
+					<h2 style="color: white; margin-top: -80px">كل لحظة في زفافك… نُهديها لمسة من الجمال والرقي</h2>
 			</div>
+            {{-- <div class="about-one_button" style="text-align: center;">
+                <a href="{{ route('home') }}#contact" class="theme-btn btn-style-one">
+                    <span class="btn-wrap">
+                        <span class="text-one" style="font-size: 18px; color: white;">تواصل معنا</span>
+                        <span class="text-two" style="font-size: 18px; color: white;">تواصل معنا</span>
+                    </span>
+                </a>
+            </div> --}}
 		</div>
 	</section>
 	<!-- End Page Title -->
@@ -77,19 +104,17 @@
                 @foreach ($stores as $store)
                     <div class="news-block_two col-lg-3 col-md-6 col-sm-12">
                         <div class="news-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <!-- Post Info -->
-                            <!-- <div class="news-block_two-date">2 May 2025</div> -->
+
                             <div class="news-block_two-image">
                                 <a href="{{ route('store', ['id' => $store['id']]) }}"><img src="{{ asset($store['main_image_url']) }}" alt="" /></a>
-                                <img src="{{ asset($store['main_image_url']) }}" alt="" />
+                                <img src="{{ asset($store['main_image_url']) }}" alt=""  />
                             </div>
-                            <div class="news-block_two-content">
-                                <!-- <ul class="news-block_two-meta">
-                                    <li><span class="icon fa-regular fa-calendar fa-fw"></span>by Christine</li>
-                                    <li><span class="icon fa-solid fa-comments fa-fw"></span>(03) Comments</li>
-                                </ul> -->
+                            <div class="news-block_two-content text-center">
                                 <h4 class="news-block_two-title"><a href="{{ route('store', ['id' => $store['id']]) }}">{{ $store['name'] }}</a></h4>
-                                <a class="news-block_two-more" href="{{ route('store', ['id' => $store['id']]) }}">اقرأ المزيد</a>
+                                <a href="{{ route('store', ['id' => $store['id']]) }}"
+                                style="display:inline-block; background-color:#F2B100; color:#fff; padding:10px 25px; border-radius:25px; text-decoration:none; margin-top:15px; font-weight:600;">
+                                 عــرض التفــاصيل
+                                </a>
                             </div>
                         </div>
                     </div>

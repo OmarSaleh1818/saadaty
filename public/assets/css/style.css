@@ -1653,8 +1653,8 @@
 	margin-top: -50px;
 	padding: 40px 30px 30px;
 	background-color: var(--white-color);
-	margin-right: var(--margin-right-30);
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+    border-radius: 0px 0px 20px 20px;
 }
 
 .news-block_one-date{
@@ -1697,7 +1697,7 @@
 .news-block_one-title{
 	position: relative;
 	text-transform: capitalize;
-	margin-top: var(--margin-top-15);
+	margin-top: 0px;
 }
 
 .news-block_one-title a{
@@ -2285,7 +2285,7 @@
 
 .about-two_image-inner{
 	position: relative;
-	padding-left: var(--padding-left-50);
+	padding-right: var(--padding-left-50);
 }
 
 .about-two_image{
@@ -2294,9 +2294,35 @@
 
 .about-two_image img{
 	position: relative;
-	max-width: inherit;
 }
 
+.search-box-btn .btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-box-btn .btn:hover {
+    background-color: #373232;
+    color: #fff;
+}
+
+.search-btn .btn {
+    background-color: transparent;
+    border: 2px solid #1e1c1c;
+    color: #1e1c1c;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-btn .btn:hover {
+    background-color: #bababa;
+    color: #1e1c1c;
+}
 /* About Two Counter */
 
 .about-two_counter{
@@ -3730,7 +3756,7 @@
 	right: -1px;
 	bottom: -1px;
 	opacity: 0;
-	background-color: var(--color-two);
+	background-color: #F2B100;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -11750,7 +11776,7 @@ blockquote{
 
 .banner-section-two{
 	position:relative;
-	padding:320px 0px 120px;
+	padding:320px 0px 180px;
 	background-size:cover;
 	background-repeat:no-repeat;
 	-webkit-transition:all 600ms ease;
@@ -11767,7 +11793,6 @@ blockquote{
 	top: 0px;
 	right: 0px;
 	bottom: 0px;
-	background-color: rgba(0, 0, 0, 0.70);
 }
 
 .banner-section-two .outer-container{

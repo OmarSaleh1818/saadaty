@@ -123,7 +123,7 @@
 </style>
 
     <!-- Page Title -->
-    <section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/11.jpg') }})">
+    <section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/saadaty_banner.png') }})">
 
     </section>
     <!-- End Page Title -->
