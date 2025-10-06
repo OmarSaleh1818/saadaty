@@ -1,4 +1,4 @@
-/*** 
+/***
 
 ====================================================================
 	Header style One
@@ -48,7 +48,7 @@
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
-	transition:all 300ms ease;	
+	transition:all 300ms ease;
 }
 
 .main-header .header-lower{
@@ -191,7 +191,7 @@
 	-moz-animation-iteration-count: 1;
 	-op-animation-iteration-count: 1;
 	-webkit-animation-iteration-count: 1;
-	animation-iteration-count: 1;	
+	animation-iteration-count: 1;
 }
 
 .main-header .main-menu .navigation > li > a{
@@ -276,7 +276,7 @@
 
 .main-header .main-menu .navigation > li > ul.from-right{
 	left:auto;
-	right:0px;	
+	right:0px;
 }
 
 .main-header .main-menu .navigation > li > ul > li{
@@ -501,7 +501,7 @@
 
 .main-header .main-menu .navigation > li > ul > li > ul.from-right{
 	left:auto;
-	right:0px;	
+	right:0px;
 }
 
 .main-header .main-menu .navigation > li > ul > li > ul > li{
@@ -597,7 +597,7 @@
 }
 
 .main-header .main-menu .navigation > li > ul > li > ul > li:last-child{
-	border-bottom:none;	
+	border-bottom:none;
 }
 
 .main-header .main-menu .navigation > li > ul > li > ul > li > a{
@@ -740,7 +740,7 @@
 	color: var(--color-three);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Mobile Menu
@@ -779,7 +779,7 @@
 .mobile-menu .nav-logo{
 	position:relative;
 	padding:20px 20px;
-	text-align:left;	
+	text-align:left;
 }
 
 .mobile-menu .nav-logo img{
@@ -810,7 +810,7 @@
     -webkit-transition: all 900ms ease;
     -ms-transition: all 900ms ease;
     -o-transition: all 900ms ease;
-	
+
 	-webkit-transition-delay: 300ms;
 	-moz-transition-delay: 300ms;
 	-ms-transition-delay: 300ms;
@@ -830,7 +830,7 @@
 	-webkit-transform: translateX(0%);
 	-ms-transform: translateX(0%);
 	transform: translateX(0%);
-	
+
 
 }
 
@@ -846,7 +846,7 @@
 	padding: 0px 0px;
 	z-index: 5;
 	border-radius: 0px;
-	
+
 	transition: all 900ms ease;
     -moz-transition: all 900ms ease;
     -webkit-transition: all 900ms ease;
@@ -988,7 +988,7 @@
 
 .main-header .mobile-menu .navigation li:hover > a,
 .main-header .mobile-menu .navigation li.current > a{
-	
+
 }
 
 .main-header .mobile-menu .navigation li.dropdown .dropdown-btn{
@@ -1079,7 +1079,7 @@
 
 .hamburger {
 	position:relative;
-	
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -1151,7 +1151,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
   }
 }
 
-/*** 
+/***
 
 ====================================================================
 	Search Popup
@@ -1167,7 +1167,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
 	width: 100%;
 	z-index: 99999;
 	margin-top: -540px;
-	transform: translateY(-100%); 
+	transform: translateY(-100%);
     transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -1357,7 +1357,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
 	width:3px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Hidden Sidebar style
@@ -1439,7 +1439,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
 	padding:25px 20px;
 	margin:0px;
 }
-	
+
 .sidebar-info-contents .lower-box{
 	position:relative;
 	border-top:1px solid rgba(var(--black-color-rgb), 0.10);
@@ -1746,3 +1746,50 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
 .about-sidebar .sidebar-inner::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+   /* تنسيق العناصر داخل القائمة */
+.navigation li {
+  display: inline-block;
+  margin: 0 50px; /* المسافة بين الروابط */
+}
+
+/* تنسيق الروابط نفسها */
+.navigation li a {
+  position: relative;
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* عند تمرير الماوس */
+.navigation li a:hover {
+  color: #F2B100;
+}
+
+/* Base underline (hidden) */
+.navigation li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -25px; /* المسافة بين النص والخط */
+  transform: translateX(-50%);
+  width: 0;
+  height: 7px;
+  background-color: #F2B100;
+  transition: width 0.3s ease;
+}
+
+/* Hover or active state — underline grows from center */
+.navigation li a:hover::after,
+.navigation li.active a::after {
+  width: 50%; /* controls underline length (centered) */
+  border-radius: 30px;
+}
+
+/* عند كون الرابط نشط */
+.navigation li.active a {
+  color: #F2B100;
+}
+

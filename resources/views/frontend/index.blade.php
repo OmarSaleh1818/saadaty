@@ -1,90 +1,6 @@
 @extends('frontend.main')
 
 @section('content')
-
-<style>
-    .news-block_one-image {
-        width: 100%;
-        height: 400px;
-        overflow: hidden;
-    }
-
-    .news-block_one-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-
-    .download-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .download-buttons img {
-        height: 100px;
-        width: auto;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .download-buttons img:hover {
-        transform: scale(1.05);
-    }
-
-    .btn-style-one {
-         border-radius: 30px;
-         margin-top: 20px
-    }
-
-    .contact-form-box {
-        direction: rtl;
-        background-color: #ffffff;
-        border: 1px solid #e5e5e5;
-        transition: all 0.3s ease;
-    }
-
-    .contact-form-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .contact-form-title {
-        color: black;
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-
-    .form-control:focus {
-        border-color: black;
-        box-shadow: 0 0 0 0.15rem rgba(242, 177, 0, 0.25);
-    }
-
-    .custom-btn {
-        background-color: #F2B100;
-        color: #fff;
-        border: none;
-    }
-
-    .custom-btn:hover {
-        background-color: #d99b00; /* لون أغمق عند المرور */
-    }
-
-    /* افتراضياً لا شيء */
-.text-center h2 {
-    color: white;
-    margin-top: -80px; /* للكمبيوتر */
-}
-
-/* عند الشاشات الصغيرة (مثلاً أقل من 768px) */
-@media (max-width: 767px) {
-    .text-center h2 {
-        margin-top: 0 !important; /* إزالة الـ margin على الجوال */
-    }
-}
-
-</style>
 <!-- Slider One -->
 	<section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/saadaty_banner.png') }})">
 		<div class="auto-container">
@@ -104,8 +20,6 @@
 
 	<!-- About Two -->
 	<section class="about-two" id="about">
-		<div class="about-two_pattern-one" style="background-image:url(assets/images/background/pattern-15.png)"></div>
-		<div class="about-two_pattern-three" style="background-image:url(assets/images/background/pattern-18.png)"></div>
 		<div class="auto-container">
 			<div class="row clearfix">
 
@@ -132,7 +46,7 @@
 				<div class="about-two_image-column col-lg-6 col-md-12 col-sm-12">
 					<div class="about-two_image-inner">
 						<div class="about-two_image titlt" data-tilt data-tilt-max="5">
-							<img src="assets/images/resource/about1.png" style="border-radius: 25px;" alt="" />
+							<img src="assets/images/resource/about1.png" alt="" />
 						</div>
 
 					</div>
@@ -144,8 +58,6 @@
 
     {{-- mission --}}
     <section class="services-one" id="mission">
-		<div class="services-one_pattern-one" style="background-image:url(assets/images/background/pattern-6.png)"></div>
-		<div class="services-one_pattern-two" data-parallax="{&quot;y&quot; : 100}" style="transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); background-image:url(assets/images/background/pattern-10.png)"></div>
 		<div class="auto-container">
 			<div class="sec-title centered title-anim">
 				<h2 class="sec-title_heading">الرؤيــة والمهمــة</h2>
@@ -178,11 +90,9 @@
 		</div>
 	</section>
     <!-- end mission -->
-
+    <div class="centered-border"></div>
     {{-- categories --}}
 	<section class="speakers-one" id="categories">
-		<div class="speakers-one_pattern" style="background-image:url({{ asset('assets/images/background/pattern-4.png') }})"></div>
-		<div class="speakers-one_pattern-two" style="background-image:url({{ asset('assets/images/background/pattern-6.png') }})"></div>
 		<div class="auto-container">
 
 			<div class="sec-title title-anim centered">
@@ -203,8 +113,9 @@
                                 <ul class="news-block_one-meta">
                                 </ul>
                                 <h5 class="news-block_one-title"><a href="{{ route('stores', ['id' => $category['id']]) }}">{{ $category['name'] }}</a></h5>
+                                <p style="margin-top: 20px;">قاعات فخمة تتسع لأجمل احلامكم</p>
                                 <a href="{{ route('stores', ['id' => $category['id']]) }}"
-                                style="display:inline-block; background-color:#F2B100; color:#fff; padding:10px 25px; border-radius:25px; text-decoration:none; margin-top:15px; font-weight:600;">
+                                    class="btn-detail">
                                  عــرض التفــاصيل
                                 </a>
                             </div>
@@ -216,16 +127,20 @@
 		</div>
 	</section>
     {{-- end categories --}}
-
+    <div class="centered-border"></div>
     {{-- contact --}}
-    <section class="news-two" style="background-image:url(assets/images/background/4.jpg)" id="contact">
+    <section class="map-one">
 		<div class="auto-container">
+            <div class="sec-title title-anim centered">
+				<h2 class="sec-title_heading">الأسئـــلة الشـــائعة</h2>
+			</div>
 			<div class="row clearfix">
+                <div class="col-lg-2">
 
-				<div class="col-lg-6 col-md-12 col-sm-12">
+                </div>
+				<div class="col-lg-8 col-md-12 col-sm-12">
 					<!-- Accordion Box / Style Two -->
 					<ul class="accordion-box style-two">
-
 						<!-- Block -->
 						<li class="accordion block active-block">
 							<div class="acc-btn active"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>ما هي منصات سعادتي؟</div>
@@ -299,9 +214,20 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="col-lg-2">
+
+                </div>
+			</div>
+		</div>
+	</section>
+
+    <section class="news-two" id="contact">
+        <div class="auto-container">
+
+			<div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="contact-form-box p-4 shadow rounded-4 bg-white">
-                        <h3 class="contact-form-title text-center mb-4">التواصــــــل</h3>
+                        <h3 class="contact-form-title text-center mb-4">تواصـــل معنـــا</h3>
 
                         <form method="post" action="#">
                             <div class="mb-3">
@@ -309,7 +235,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <input type="email" name="email" class="form-control form-control-lg text-end" placeholder="الايميــل" required>
+                                <input type="email" name="email" class="form-control form-control-lg text-end" placeholder="البريــد الالكتروني" required>
                             </div>
 
                             <div class="mb-3">
@@ -317,25 +243,49 @@
                             </div>
 
                             <div class="mb-4">
-                                <textarea name="message" rows="4" class="form-control form-control-lg text-end" placeholder="الرسالـــة" required></textarea>
+                                <textarea name="message" rows="4" class="form-control form-control-lg text-end" placeholder="رســـالتك" required></textarea>
                             </div>
 
                             <div class="text-center">
-                                <button type="submit" class="btn custom-btn px-5 py-2 rounded-pill fw-bold">
+                                <button type="submit" class="btn custom-btn fw-bold">
                                     إرســــال
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
-
 			</div>
 		</div>
-	</section>
+    </section>
     {{-- end contact --}}
 
+    {{-- social media --}}
+    <section class="clients-two">
+        <div class="auto-container">
+            <div class="sec-title title-anim centered">
+                <h2 class="sec-title_heading">تابعـــونا</h2>
+            </div>
+            <div class="social-wrapper text-center">
+                <ul class="social-box">
+                    <li><a href="https://wa.me/966503732107" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li>
+                        <a href="https://x.com/saadaty107" class="social-icon">
+                            <!-- SVG لتويتر X -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="x-icon">
+                                <path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com/saadaty1007/" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.snapchat.com/@saadaty107" class="social-icon"><i class="fa-brands fa-snapchat-ghost"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    {{-- end social media --}}
+
     {{-- application --}}
-    <section class="events-about-section">
+    {{-- <section class="events-about-section">
 		<div class="auto-container">
 			<div class="row clearfix">
 
@@ -372,7 +322,7 @@
 
 			</div>
 		</div>
-	</section>
+	</section> --}}
     {{-- end application --}}
 
 @endsection
