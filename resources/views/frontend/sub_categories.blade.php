@@ -4,38 +4,69 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
 @endsection
 @section('content')
-
 <style>
-    .news-block_two-image {
+
+/* wrapper similar to .form-control-custom */
+.select2-container--default .select2-selection--single {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 200px; /* يمكنك تغيير الارتفاع */
-    overflow: hidden;
-    border-radius: 25px 25px 0 0; /* زوايا مدورة من الأعلى */
+    height: auto;
+    padding: 13px 2.5rem 1rem .75rem; /* مساحة إضافية للسهم */
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(11, 11, 11, 0.15);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.news-block_two-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease; /* تحريك بسيط */
+/* text centered */
+.select2-container--default .select2-selection__rendered {
+    text-align: center;
+    color: #495057;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-/* تأثير عند المرور */
-.news-block_two-image:hover img {
-    transform: scale(1.05);
+/* hide default arrow */
+.select2-container--default .select2-selection__arrow b {
+    display: none;
 }
 
-/* تأثير عند النقر */
-.news-block_two-image:active img {
-    transform: scale(0.95);
+/* custom thin gold arrow */
+.select2-container--default .select2-selection__arrow::after {
+    content: '';
+    position: absolute;
+    right: 1.5rem;
+    top: 100%;
+    width: 0.6rem;
+    height: 0.35rem;
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid #F2B100;
+    border-bottom: 2px solid #F2B100;
+    pointer-events: none;
 }
+
+/* focus effect */
+.select2-container--default.select2-container--focus .select2-selection--single {
+    border-color: #F2B100;
+    box-shadow: 0 0 0 .2rem rgba(242,177,0,.25);
+    outline: none;
+}
+
+/* dropdown list style */
+.select2-container--default .select2-results__option {
+    text-align: center;
+    padding: .75rem;
+}
+
 </style>
     <!-- Page Title -->
-	<section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/saadaty_banner.png') }})">
+	<section class="banner-section-two" style="background-image:url({{ asset('assets/images/background/stores_banner.png') }})">
 		<div class="auto-container">
 			<div class="text-center mb-5">
-					<h2 style="color: white; margin-top: -80px">كل لحظة في زفافك… نُهديها لمسة من الجمال والرقي</h2>
+					<h2 style="color: white; margin-top: 50px">كل لحظة في زفافك… نُهديها لمسة من الجمال والرقي</h2>
 			</div>
             {{-- <div class="about-one_button" style="text-align: center;">
                 <a href="{{ route('home') }}#contact" class="theme-btn btn-style-one">
@@ -50,59 +81,64 @@
 	<!-- End Page Title -->
 
 	<!-- Sidebar Page Container -->
-	<section class="news-two" id="blog" style="background-image:url({{ asset('assets/images/background/4.jpg') }})">
+	<section class="news-two" id="blog">
 		<div class="auto-container">
-			<div class="sec-title">
-				<div class="text-center">
-					<div class="title-box title-anim">
-						<!-- <div class="sec-title_title">Blog % Articles</div> -->
-						<h2 class="sec-title_heading">{{ $categoryName }}</h2>
-					</div>
-
-				</div>
-			</div>
 			<div class="row clearfix">
-				<form action="#" method="GET" class="container mt-4">
-					<div class="row g-3 mb-4">
+				<div class="default-form contact-form">
+                    <form method="post" action="https://html.themerange.net/conat/conat/sendemail.php" id="contact-form" novalidate="novalidate">
+                        <div class="row clearfix mt-5 mb-5">
 
-						<!-- City Selection -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<label for="city" class="form-label">اختر المدينة</label>
-							<select class="form-control" id="city" name="city" required>
-								<option value="">اختر المدينة</option>
-								<option value="jeddah" selected>جدة</option>
-							</select>
-						</div>
+                            <div class="col-lg-4 mt-3 select-wrapper">
+                                <select class="form-control-custom" id="city" name="city" required>
+                                    <option value="jeddah" selected>جدة</option>
+                                </select>
+                            </div>
 
-						<!-- Neighborhood Selection -->
-						<div class="col-lg-4 col-md-6 col-sm-12 mt-2">
-							<label for="neighborhood" class="form-label">اختر الحي</label>
-							<select class="form-control select2" name="district" required>
-                                @foreach ($districts as $district)
-                                    <option value="{{ $district }}">
-                                        {{ $district }}
-                                    </option>
-                                @endforeach
-							</select>
-						</div>
+                            <div class="col-lg-4 mt-3 select-wrapper">
+                                <select class="form-control-custom select2" name="district" required>
+                                    @foreach ($districts as $district)
+                                        <option value="{{ $district }}">{{ $district }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
-						<!-- Search Input with Button -->
-						<div class="col-lg-4 col-md-12 col-sm-12">
-							<label for="search" class="form-label">بحث</label>
-							<div class="input-group">
-								<button class="btn btn-dark" type="submit">
-									<i class="fa fa-search"></i> <!-- Bootstrap Icon -->
-								</button>
-								<input type="text" name="serch" id="search" class="form-control" placeholder="بحث .." required>
-							</div>
-						</div>
+                            <div class="col-lg-4 mt-3 search-wrapper">
+                                <input type="search" name="search-field" placeholder="البحــث..." required>
+                                <button type="submit">
+                                    <span class="icon fa fa-search"></span>
+                                </button>
+                            </div>
 
-					</div>
-				</form>
+                            <div class="col-lg-4 mt-3 select-wrapper">
+                                <select class="form-control-custom" id="leatest" name="leatest" required>
+                                    <option value="leatest" selected>من الأعلى إلى الأدنى</option>
+                                    <option value="leatest">من الأدنى إلى الأعلى</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-4 mt-3 select-wrapper">
+                                <select class="form-control-custom" id="new" name="new" required>
+                                    <option value="new" selected>الأحدث</option>
+                                    <option value="new">الأقدم</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-4 mt-3 d-flex justify-content-center">
+                                <button class="theme-btn btn-one">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">تطبيــق</span>
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
 
 				<!-- News Block -->
                 @foreach ($stores as $store)
-                    <div class="news-block_two col-lg-3 col-md-6 col-sm-12">
+                    <div class="news-block_two col-lg-3 col-md-6 col-sm-12 mt-3">
                         <div class="news-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
 
                             <div class="news-block_two-image">

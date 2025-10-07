@@ -113,7 +113,7 @@
                                 <ul class="news-block_one-meta">
                                 </ul>
                                 <h5 class="news-block_one-title"><a href="{{ route('stores', ['id' => $category['id']]) }}">{{ $category['name'] }}</a></h5>
-                                <p style="margin-top: 20px;">قاعات فخمة تتسع لأجمل احلامكم</p>
+                                <p style="margin-top: 20px;">{{ $category['description'] }}</p>
                                 <a href="{{ route('stores', ['id' => $category['id']]) }}"
                                     class="btn-detail">
                                  عــرض التفــاصيل
@@ -267,17 +267,17 @@
             </div>
             <div class="social-wrapper text-center">
                 <ul class="social-box">
-                    <li><a href="https://wa.me/966503732107" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://wa.me/966503732107" target="_BLANK" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a></li>
                     <li>
-                        <a href="https://x.com/saadaty107" class="social-icon">
+                        <a href="https://x.com/saadaty107" target="_BLANK" class="social-icon">
                             <!-- SVG لتويتر X -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="x-icon">
                                 <path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"></path>
                             </svg>
                         </a>
                     </li>
-                    <li><a href="https://www.instagram.com/saadaty1007/" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.snapchat.com/@saadaty107" class="social-icon"><i class="fa-brands fa-snapchat-ghost"></i></a></li>
+                    <li><a href="https://www.instagram.com/saadaty1007/" target="_BLANK" class="social-icon"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.snapchat.com/@saadaty107" target="_BLANK" class="social-icon"><i class="fa-brands fa-snapchat-ghost"></i></a></li>
                 </ul>
             </div>
         </div>

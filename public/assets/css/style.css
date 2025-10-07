@@ -2151,7 +2151,7 @@
 .about-two{
 	position: relative;
 	overflow: hidden;
-	padding: 110px 0px 50px;
+	padding: 50px 0px 50px;
 }
 
 .about-two_pattern-one{
@@ -3332,7 +3332,7 @@
 
 .news-two{
 	position: relative;
-	padding: 50px 0px 50px;
+	padding: 0px 0px 50px;
 }
 
 .news-block_two{
@@ -3410,6 +3410,7 @@
 	padding: 30px 30px 30px;
 	background-color: var(--white-color);
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+    border-radius: 0px 0px 20px 20px;
 }
 
 .news-block_two-meta{
@@ -12070,3 +12071,154 @@ blockquote{
         fill: #e0a500;
         transform: scale(1.2);
     }
+
+        .news-block_two-image {
+    width: 100%;
+    height: 200px; /* يمكنك تغيير الارتفاع */
+    overflow: hidden;
+    border-radius: 25px 25px 0 0; /* زوايا مدورة من الأعلى */
+}
+
+.news-block_two-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* تحريك بسيط */
+}
+
+/* تأثير عند المرور */
+.news-block_two-image:hover img {
+    transform: scale(1.05);
+}
+
+/* تأثير عند النقر */
+.news-block_two-image:active img {
+    transform: scale(0.95);
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-control-custom {
+    display: block;
+    width: 100%;
+    padding: 13px 2.5rem 1rem .75rem; /* مساحة إضافية للسهم */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-shadow: 0px 0px 15px rgba(11, 11, 11, 0.15);
+    /* نستخدم SVG كسهم مدموج بلون #F2B100 */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23F2B100' stroke-width='2' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+}
+
+.form-control-custom:focus {
+    border-color: #F2B100;
+    box-shadow: 0 0 0 .2rem rgba(242,177,0,.25);
+    outline: none;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* input field */
+.search-wrapper input[type="search"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    text-align: right;
+    border-radius: 20px 0 0 20px;
+    font-size: 1rem;
+    color: #495057;
+    outline: none;
+    box-shadow: 0px 0px 15px rgba(11, 11, 11, 0.15);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* focus effect */
+.search-wrapper input[type="search"]:focus {
+    border-color: #F2B100;
+    box-shadow: 0 0 0 .2rem rgba(242,177,0,.25);
+}
+
+/* button */
+.search-wrapper button {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* gold icon */
+.search-wrapper .icon {
+    color: #F2B100;
+    font-size: 1.1rem;
+}
+
+/* hover effect */
+.search-wrapper button:hover {
+    background-color: #F2B100;
+}
+
+.search-wrapper button:hover .icon {
+    color: #fff;
+}
+
+.theme-btn.btn-one {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 90px;
+    background: linear-gradient(135deg, #F2B100, #ffcc33);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(242,177,0,0.3);
+}
+
+.theme-btn.btn-one .btn-wrap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* تأثير التحريك عند المرور */
+.theme-btn.btn-one:hover .text-one {
+    transform: translateY(-100%);
+}
+/* تأثير عند المرور على الزر */
+.theme-btn.btn-one:hover {
+    background: linear-gradient(135deg, #ffcc33, #F2B100);
+    box-shadow: 0 6px 20px rgba(242,177,0,0.4);
+    transform: translateY(-2px);
+}
+
+/* تأثير عند الضغط */
+.theme-btn.btn-one:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(242,177,0,0.3);
+}
