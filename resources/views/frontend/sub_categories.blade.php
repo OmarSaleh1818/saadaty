@@ -85,7 +85,7 @@
 		<div class="auto-container">
 			<div class="row clearfix">
 				<div class="default-form contact-form">
-                    <form method="post" action="https://html.themerange.net/conat/conat/sendemail.php" id="contact-form" novalidate="novalidate">
+                    <form method="post" action="#" id="contact-form" novalidate="novalidate">
                         <div class="row clearfix mt-5 mb-5">
 
                             <div class="col-lg-4 mt-3 select-wrapper">

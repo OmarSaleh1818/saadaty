@@ -58,7 +58,7 @@
 
 				<!-- Logo -->
 				<div class="logo">
-					<a href="index.html" title=""><img src="{{ asset('assets/images/logo-saadaty.png') }}" width="100px" height="100px" alt="" title=""></a>
+					<a href="{{ route('home') }}" title=""><img src="{{ asset('assets/images/logo-saadaty.png') }}" width="100px" height="100px" alt="" title=""></a>
 				</div>
 
 				<!-- Right Box -->

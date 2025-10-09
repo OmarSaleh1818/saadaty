@@ -855,8 +855,8 @@
 	line-height: 2em;
 	z-index: 1;
 	display: inline-block;
-	font-size: var(--font-60);
-	color: #8b7d4f;
+	font-size: 45px;
+	color: #F2B100;
 	font-family: "Flaticon";
 }
 

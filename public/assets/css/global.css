@@ -1009,17 +1009,17 @@ img{
 
 .sec-title{
 	position:relative;
-	margin-bottom:var(--margin-bottom-40);
+	margin-bottom:var(--margin-bottom-20);
 }
 
 .sec-title_title{
 	position: relative;
     font-weight: 700;
 	letter-spacing:1px;
-	color:var(--color-three);
+	color: #000000;
 	font-size:var(--font-16);
 	text-transform:uppercase;
-	margin-bottom:var(--margin-bottom-20);
+	margin-top:var(--margin-bottom-10);
 }
 
 .sec-title_heading{

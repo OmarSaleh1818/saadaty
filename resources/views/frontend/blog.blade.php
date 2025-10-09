@@ -27,7 +27,7 @@
         position: absolute;
         bottom: 20px;
         right: 20px;
-        background: #fff;
+        background: #F2B100;
         border-radius: 10px;
         padding: 8px 15px;
         font-weight: bold;
@@ -35,7 +35,7 @@
         align-items: center;
         gap: 6px;
         text-decoration: none;
-        color: #000;
+        color: #fff;
         box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
     }
 
@@ -71,7 +71,7 @@
 		padding: 0px 0px 120px;
 	}
 	.gallery-three {
-		padding: 50px 0px 110px;
+		padding: 50px 0px 10px;
 	}
     .social-title {
         font-size: 1.1rem;
@@ -120,6 +120,65 @@
     .social-box a.twitter:hover   { background: #1da1f2; }
     .social-box a.snapchat:hover  { background: #fffc00; color: #000; }
     .social-box a.dribbble:hover  { background: #ea4c89; }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding-left: 10px;
+      text-align: center
+    }
+    .map-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .info-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .social-icons i {
+      font-size: 2.5rem;
+      gap: 20px;
+      margin: 0 10px;
+      color: #000;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .social-icons i:hover {
+      color: #f7c948;
+      transform: translateY(-3px);
+    }
+
+    .social-icons svg {
+      font-size: 2.5rem;
+      gap: 20px;
+      margin: 0 10px;
+      color: #000;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .social-icons svg:hover {
+      color: #f7c948;
+      transform: translateY(-3px);
+    }
+
+    .contact-icon {
+      color: #f7c948;
+      margin-left: 8px;
+      font-size: 25px;
+    }
+    .map-link {
+      color: #000;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .map-link:hover {
+      text-decoration: underline;
+    }
 </style>
 
     <!-- Page Title -->
@@ -131,11 +190,11 @@
     <!-- Speakers Three -->
     <section class="gallery-three">
         <div class="auto-container">
-            <div class="sec-title centered title-anim">
+            <div class="sec-title title-anim">
                 <h2 class="sec-title_heading">{{ $store['name'] }}</h2>
                 <div class="sec-title_title">
                     {{ $store['city'] }}, {{ $store['district'] }}
-                    <i class="icon fa fa-map-marker"></i>
+                    <span style="color: #F2B100"><i class="icon fa fa-map-marker"></i></span>
                 </div>
             </div>
             <div class="row clearfix mb-5">
@@ -167,35 +226,26 @@
                     </div>
                 </div>
             </div>
+            <hr style="margin-bottom: 40px; width: 80%; margin-left: 10%;">
             <div class="row clearfix">
                 <!-- Counter Column -->
                 <div class="container mb-3" dir="rtl">
                     <div class="d-flex justify-content-between row-gap-3 flex-md-row flex-lg-nowrap flex-md-wrap flex-column">
                         <div class="d-flex align-items-center">
                             <div>
-                                <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">السعـــر</p>
+                                <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">السعر</p>
                                 <p class="black-color mb-0">
                                    من {{ $store['price_from'] }} إلى {{ $store['price_to'] }}
                                 </p>
                             </div>
                             <div class="feature-block_one-icon">
-                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39" style="width: 50px; height: 50px;">
-                                    <defs>
-                                        <style>
-                                        .cls-1 {
-                                            fill: #8b7d4f;
-                                        }
-                                        </style>
-                                    </defs>
-                                    <path class="cls-1" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
-                                    <path class="cls-1" d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
-                                </svg>
+                                <i class="flaticon-money-bag"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-2">
                             <div>
                                 <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">
-                                    الخبرة بالسنــوات
+                                    خبرة السنوات
                                 </p>
                                 <p class="font-size-16 black-color mb-0 text-center">
                                    {{ $store['experience'] }} +
@@ -208,7 +258,7 @@
                         <div class="d-flex align-items-center gap-2">
                             <div>
                                 <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">
-                                    الفريــــــق
+                                    الفريق
                                 </p>
                                 <p class="font-size-16 black-color mb-0 text-center">
                                     {{ $store['team_size'] }} +
@@ -221,7 +271,7 @@
                         <div class="d-flex align-items-center gap-2">
                             <div>
                                 <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">
-                                    العربــــون
+                                    العربون
                                 </p>
                                 <p class="font-size-16 black-color mb-0 text-center">
                                     {{ $store['forward'] }}
@@ -233,13 +283,65 @@
                         </div>
                     </div>
                 </div>
-                <div class="author-box">
-                    <div class="author-text">
-                        {{ $store['description'] }}
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row align-items-start g-4">
+                <!-- الوصف -->
+                <div class="col-lg-6">
+                    <h3 class="section-title">الوصف</h3>
+                    <p class="lead text-center">
+                         {{ $store['description'] }}
+                    </p>
+                </div>
+
+                <div class="col-lg-1">
+
+                </div>
+
+                <!-- الخريطة -->
+                <div class="col-lg-5">
+                    <h3 class="section-title">استكشف المنطقة</h3>
+                    <div class="map-card mb-3">
+                        <iframe src="https://www.google.com/maps?q=Jeddah%20Corniche&output=embed" width="100%" height="250" style="border:0;"></iframe>
+                    </div>
+                    <div class="text-center border p-3 shadow-sm">
+                        <p class="mb-1">{{ $store['city'] }}, {{ $store['district'] }}</p>
+                        <a href="#" class="map-link" style="color: #F2B100;"><i class="fa fa-location-dot"></i> عرض على الخريطة</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mt-5">
+                <!-- بيانات الاتصال -->
+                <div class="col-md-6 text-center">
+                <h4 class="fw-bold mb-3">بيانات الاتصال</h4>
+                <p style="font-size: 20px;"> {{ $store['user']['name'] }}<i class="fa fa-user contact-icon"></i></p>
+                <p style="font-size: 20px;"> {{ $store['email'] }} <i class="fa fa-envelope contact-icon"></i></p>
+                <p style="font-size: 20px;"><span id="mobile-placeholder" style="cursor:pointer; text-decoration:underline;">
+                        اضغط هنا
+                    </span><i class="fa fa-phone contact-icon"></i>
+                </p>
+                </div>
+
+                <!-- تابعونا -->
+                <div class="col-md-6 text-md-end text-center">
+                    <h4 class="fw-bold mb-3">: تابعونا على</h4>
+                    <div class="social-icons">
+                        <a href="{{ $store['snapchat'] }}" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-snapchat"></i>
+                        </a>
+                        <a href="{{ $store['twitter'] }}" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style="height: 35px;"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/></svg>
+                        </a>
+                        <a href="{{ $store['instagram'] }}" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        <hr style="margin-bottom: 40px; width: 80%; margin-left: 10%;">
        <div class="container my-5">
             <div class="row g-4">
 
@@ -247,7 +349,7 @@
                 <div class="col-md-6 mb-3">
                     <!-- Section Title -->
                     <div class="text-center mb-4">
-                        <h3 class="fw-bold">خدماتنا</h3>
+                        <h3 class="fw-bold">الخدمات</h3>
                         <p class="text-muted">اكتشف أفضل الخدمات التي نقدمها لك بطريقة احترافية وبسيطة</p>
                     </div>
 
@@ -298,7 +400,7 @@
 
                             <a href="{{ $file }}" target="_blank"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                عرض <i class="bi {{ $icon }} fs-5"></i>
+                                انقر هنا للعرض <i class="bi {{ $icon }} fs-5"></i>
                             </a>
                         @endforeach
                     </div>
@@ -307,88 +409,6 @@
             </div>
         </div>
     </section>
-    <!-- End Speakers Four -->
-
-    <!-- Google Map -->
-    <section class="location-one" style="background-image:url({{ asset('assets/images/background/5.jpg') }})">
-        <div class="auto-container">
-            <div class="sec-title title-anim centered">
-                <h2 class="sec-title_heading">الموقع</h2>
-            </div>
-            <div class="row clearfix">
-                <!-- Map Column -->
-                <div class="location-one_map-column col-lg-8 col-md-12 col-sm-12">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10893.958965563896!2d39.103161928785404!3d21.611301991535665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3dbd751aa2b57%3A0xd32f14ab8ce46662!2sJeddah%20Hilton!5e1!3m2!1sen!2ssa!4v1758008205028!5m2!1sen!2ssa"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <!-- Info Column -->
-                <div class="location-one_info-column col-lg-4 col-md-12 col-sm-12">
-
-                    <div class="location-info_block">
-                        <div class="location-info_block-inner">
-                            <div class="location-info_block-content">
-                                <div class="location-info_block-icon flaticon-user-1"></div>
-                                <strong>الاســم</strong>
-                                {{ $store['user']['name'] }}
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Location Info Block -->
-                    <div class="location-info_block">
-                        <div class="location-info_block-inner">
-                            <div class="location-info_block-content">
-                                <div class="location-info_block-icon flaticon-email-1"></div>
-                                <strong>الايميل</strong>
-                                {{ $store['email'] }}
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Location Info Block -->
-                    <div class="location-info_block">
-                        <div class="location-info_block-inner">
-                            <div class="location-info_block-content">
-                                <div class="location-info_block-icon flaticon-phone"></div>
-                                <strong>رقم الجوال</strong>
-                                <span id="mobile-placeholder" style="color:blue;cursor:pointer; text-decoration:underline;">
-                                    اضغط هنا
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Location Info Block -->
-                    <div class="location-info_block">
-                        <div class="location-info_block-inner">
-                                <h6 class="social-title">التواصــــل</h6>
-                                <ul class="social-box">
-                                    <li>
-                                        <a href="{{ $store['twitter'] }}" target="_blank" class="twitter">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style="height: 25px;"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/></svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ $store['snapchat'] }}" target="_blank" class="snapchat">
-                                            <i class="fa-brands fa-snapchat-ghost"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ $store['instagram'] }}" target="_blank" class="dribbble">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Google Map -->
 
 @endsection
 @section('scripts')
