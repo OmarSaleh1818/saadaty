@@ -212,20 +212,6 @@
 	-o-transition:all 500ms ease;
 }
 
-.main-header .main-menu .navigation > li > a > span{
-	position:absolute;
-	right:-25px;
-	top:20px;
-	width:42px;
-	height:16px;
-	font-weight:600;
-	line-height:1.6em;
-	border-radius:50px;
-
-	font-size:var(--font-11);
-	color:var(--black-color);
-	background-color:var(--main-color);
-}
 
 .main-header .main-menu .navigation > li:last-child{
 	margin-right:var(--margin-zero);
@@ -604,7 +590,7 @@
 	position:relative;
 	display:block;
 	line-height:24px;
-	
+
 	font-weight:600;
 	font-size:var(--font-14);
 	text-transform:uppercase;

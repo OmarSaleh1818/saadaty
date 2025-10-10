@@ -6,10 +6,24 @@
 @section('content')
 
 <style>
-    .gallery-wrapper {
-        display: flex;
-        gap: 15px;
+    .breadcrumb a {
+        transition: color 0.3s ease;
     }
+
+    .breadcrumb a:hover {
+        color: #F2B100;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: "/";
+        color: #999;
+        padding: 0 5px;
+    }
+
+.gallery-wrapper {
+    display: flex;
+    gap: 15px;
+}
 
     .gallery-main {
         position: relative;
@@ -190,6 +204,24 @@
     <!-- Speakers Three -->
     <section class="gallery-three">
         <div class="auto-container">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" dir="rtl" class="mb-3">
+                <ol class="breadcrumb" style="background-color: transparent; font-size: 16px;">
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-semibold">
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('home') }}#categories" class="text-decoration-none text-dark fw-semibold">
+                            القاعات
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active fw-bold" aria-current="page" style="color: #F2B100;">
+                        {{ $store['name'] }}
+                    </li>
+                </ol>
+            </nav>
             <div class="sec-title title-anim">
                 <h2 class="sec-title_heading">{{ $store['name'] }}</h2>
                 <div class="sec-title_title">
@@ -231,55 +263,41 @@
                 <!-- Counter Column -->
                 <div class="container mb-3" dir="rtl">
                     <div class="d-flex justify-content-between row-gap-3 flex-md-row flex-lg-nowrap flex-md-wrap flex-column">
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">السعر</p>
-                                <p class="black-color mb-0">
-                                   من {{ $store['price_from'] }} إلى {{ $store['price_to'] }}
-                                </p>
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center align-items-center gap-4">
+                                <p class="black-color mb-0 fw-bold" style="font-size: 20px; margin-right: 15px;">السعر</p>
+                                <div class="feature-block_one-icon">
+                                    <i class="flaticon-money-bag"></i>
+                                </div>
                             </div>
-                            <div class="feature-block_one-icon">
-                                <i class="flaticon-money-bag"></i>
-                            </div>
+                            <p class="black-color mb-0 fw-semibold" style="font-size: 20px;">من {{ $store['price_from'] }} إلى {{ $store['price_to'] }}</p>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <div>
-                                <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">
-                                    خبرة السنوات
-                                </p>
-                                <p class="font-size-16 black-color mb-0 text-center">
-                                   {{ $store['experience'] }} +
-                                </p>
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center align-items-center gap-4">
+                                <p class="black-color mb-0 fw-bold" style="font-size: 20px; margin-right: 15px;">خبرة السنوات</p>
+                                <div class="feature-block_one-icon">
+                                    <i class="flaticon-digital-learning"></i>
+                                </div>
                             </div>
-                             <div class="feature-block_one-icon">
-                                <i class="flaticon-digital-learning"></i>
-                            </div>
+                            <p class="black-color mb-0 fw-semibold" style="font-size: 20px">{{ $store['experience'] }} +</p>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <div>
-                                <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">
-                                    الفريق
-                                </p>
-                                <p class="font-size-16 black-color mb-0 text-center">
-                                    {{ $store['team_size'] }} +
-                                </p>
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center align-items-center gap-4">
+                                <p class="black-color mb-0 fw-bold" style="font-size: 20px; margin-right: 15px;">العربون</p>
+                                <div class="feature-block_one-icon">
+                                    <i class="flaticon-policy"></i>
+                                </div>
                             </div>
-                             <div class="feature-block_one-icon">
-                                <i class="flaticon-conversation-1"></i>
-                            </div>
+                            <p class="black-color mb-0 fw-semibold" style="font-size: 20px">{{ $store['forward'] }}</p>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <div>
-                                <p class="black-color mb-0 fw-bold text-center" style="font-size: 20px">
-                                    العربون
-                                </p>
-                                <p class="font-size-16 black-color mb-0 text-center">
-                                    {{ $store['forward'] }}
-                                </p>
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center align-items-center gap-4">
+                                <p class="black-color mb-0 fw-bold" style="font-size: 20px; margin-right: 15px;">الفريق</p>
+                                <div class="feature-block_one-icon">
+                                    <i class="flaticon-conversation-1"></i>
+                                </div>
                             </div>
-                            <div class="feature-block_one-icon">
-                                <i class="flaticon-policy"></i>
-                            </div>
+                            <p class="black-color mb-0 fw-semibold" style="font-size: 20px">{{ $store['team_size'] }} +</p>
                         </div>
                     </div>
                 </div>
@@ -356,13 +374,11 @@
                     <div class="row g-3">
                         <!-- Services -->
                         @foreach ($store['services'] as $Service )
-                            <div class="col-12">
+                            <div class="col-12 ">
                                 <div class="card shadow-sm h-100 border-0">
-                                    <div class="card-body text-center">
-                                        <div class="mb-3">
-                                            <i class="bi bi-gear-fill fs-1 text-primary"></i>
-                                        </div>
-                                        <p class="card-text">{{ $Service }}</p>
+                                    <div class="card-body d-flex align-items-center">
+                                        <i class="fa-solid fa-star text-warning ms-3" style="font-size: 20px;"></i>
+                                        <p class="card-text mb-0 fw-semibold" style="margin-right: 20px;">{{ $Service }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -371,38 +387,49 @@
                 </div>
 
                 <!-- عمود المرفقات -->
-                <div class="col-md-6">
+                <div class="col-md-6 mb-4">
                     <div class="text-center mb-4">
                         <h3 class="fw-bold">المرفقات</h3>
                         <p class="text-muted">حمّل الملفات والمرفقات المتعلقة بخدماتنا بسهولة</p>
                     </div>
 
-                    <div class="list-group shadow-sm">
+                    <div class="row g-3">
                         @foreach($store['attachments'] as $file)
                             @php
                                 $extension = pathinfo($file, PATHINFO_EXTENSION);
-                                $icon = 'bi-file-earmark-text text-primary'; // default
+                                $icon = 'fa-solid fa-file text-warning';
+                                $color = '#f7c948';
 
                                 switch(strtolower($extension)) {
                                     case 'pdf':
-                                        $icon = 'bi-file-earmark-pdf text-danger';
+                                        $icon = 'fa-solid fa-file-pdf';
+                                        $color = '#f7c948';
                                         break;
                                     case 'xls':
                                     case 'xlsx':
-                                        $icon = 'bi-file-earmark-excel text-success';
+                                        $icon = 'fa-solid fa-file-excel';
+                                        $color = '#f7c948';
                                         break;
                                     case 'doc':
                                     case 'docx':
-                                        $icon = 'bi-file-earmark-word text-primary';
+                                        $icon = 'fa-solid fa-file-word';
+                                        $color = '#f7c948';
                                         break;
                                 }
                             @endphp
 
-                            <a href="{{ $file }}" target="_blank"
-                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                انقر هنا للعرض <i class="bi {{ $icon }} fs-5"></i>
-                            </a>
+                            <div class="col-12">
+                                <div class="card shadow-sm border-0 rounded-4">
+                                    <div class="card-body d-flex align-items-center">
+                                        <i class="{{ $icon }} ms-3" style="font-size: 24px; color: {{ $color }};"></i>
+                                        <a href="{{ $file }}" target="_blank" class="fw-semibold text-decoration-none text-dark" style="margin-right: 15px;">
+                                            انقر هنا للعرض
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         @endforeach
+
                     </div>
                 </div>
 
